@@ -14,22 +14,22 @@
         <h1 class="titre">Quiz de culture générale</h1>
     </div>
 
+
     <!-- BLOC DES TROIS IMAGES -->
-    <div    class="image-container" id="imagecontainer">
+    <div    class="image-container" id="imageContainer">
         <figure class="image-item" >
-            <img    src="Leonardo_Phoenix_Friedrich_Nietzsche_the_19thcentury_German_ph_1.jpg" class="image-Nietzsche"   id="imageNietzsche" >
-            <figcaption class="legendephilo"    id="legendephilo">Lettres et philosophie</figcaption>
+            <img    src="Leonardo_Phoenix_Friedrich_Nietzsche_the_19thcentury_German_ph_1.jpg" class="image-format1"   id="imageNietzsche" >
+            <figcaption class="legende"    id="legendephilo">Lettres et philosophie</figcaption>
         </figure>
 
         <figure class="image-item">
-            <img    src="Leonardo_Phoenix_Albert_Einstein_with_his_signature_wild_gray_3.jpg" class="image-Einstein"   id="imageEinstein" >
-            <figcaption class="legendesciences"    id="legendephilo">Sciences</figcaption>
-
+            <img    src="Leonardo_Phoenix_Albert_Einstein_with_his_signature_wild_gray_3.jpg" class="image-format1"   id="imageEinstein" >
+            <figcaption class="legende"    id="legendephilo">Sciences</figcaption>
         </figure>
 
         <figure class="image-item">
-            <img    src="Leonardo_Phoenix_Napoleon_Bonaparte_dressed_in_a_modern_outfit_3.jpg" class="image-Napoleon"   id="imageNapoleon" >
-            <figcaption class="legendehistoire"    id="legendephilo">Histoire</figcaption>
+            <img    src="Leonardo_Phoenix_Napoleon_Bonaparte_dressed_in_a_modern_outfit_3.jpg" class="image-format1"   id="imageNapoleon" >
+            <figcaption class="legende"    id="legendephilo">Histoire</figcaption>
 
         </figure>
     </div>
@@ -37,7 +37,7 @@
      <!-- BLOC DU QUESTIONNAIRE -->
 
 <div    class="quiz-container"  id="quizcontainer">
-    <div    id="quiz1" >
+    <div    id="quiz1" class="hide" >
         <h1 class="question" id="questionphilo" ></h1>
         <button  class="bouton" >Réponse 1</button>
         <button  class="bouton" >Réponse 2</button>
@@ -45,7 +45,7 @@
         <button  class="bouton" >Réponse 4</button>
     </div>
 
-    <div    id="quiz2" >
+    <div    id="quiz2" class="hide" >
         <h1 class="question" id="questionsciences"></h1>
         <button  class="bouton" >Réponse 1</button>
         <button  class="bouton" >Réponse 2</button>
@@ -53,28 +53,33 @@
         <button  class="bouton" >Réponse 4</button>
     </div>
 
-    <div    id="quiz3" >
+    <div    id="quiz3" class="hide"  >
         <h1 class="question" id="questionhistoire"></h1>
-        <button  class="bouton" >Réponse 1</button>
-        <button  class="bouton" >Réponse 2</button>
-        <button  class="bouton" >Réponse 3</button>
-        <button  class="bouton">Réponse 4</button>
+        <button  class="bouton" ></button>
+        <button  class="bouton" ></button>
+        <button  class="bouton" ></button>
+        <button  class="bouton"></button>
     </div>
 </div>
+
+<button class="retour" id="retouraccueil" style="display: none">Retour à l'accueil</button>
+
 
 <div class="success" id="successMessage" style="display: none;"></div>
 <div class="feedback" id="feedbackMessage" style="display: none;"></div>
 
+
         <!-- IMAGE MAUVAISE REPONSE -->
+    <div    class="image-format">
         <img    src="hysterical-laughter.gif" class="mauvaiseréponsequiz1" style="display: none;" id="mauvaiseréponsequiz1" >
         <img    src="200w (1).gif" class="mauvaiseréponsequiz2" style="display: none;" id="mauvaiseréponsequiz2" >
         <img    src="giphy.gif" class="mauvaiseréponsequiz3" style="display: none;" id="mauvaiseréponsequiz3" >
-
+   
         <!-- IMAGES BONNE REPONSE -->
         <img    src="Leonardo_Phoenix_Friedrich_Nietzsche_a_19thcentury_German_phil_2.jpg" class="bonneréponsequiz1" style="display: none;" id="bonneréponsequiz1" >
         <img    src="Leonardo_Phoenix_A_warm_and_cheerful_portrait_of_Albert_Einste_1.jpg" class="bonneréponsequiz2" style="display: none;" id="bonneréponsequiz2" >
         <img    src="Leonardo_Phoenix_Napolon_Bonaparte_depicted_with_a_warm_and_ch_0.jpg" class="bonneréponsequiz3" style="display: none;" id="bonneréponsequiz3" >
-
+    </div>
 <script src="index.js"  defer></script>
 
 </body>
