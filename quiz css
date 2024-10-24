@@ -1,3 +1,8 @@
+html {
+    box-sizing: content-box;
+    width: 100%;
+}
+
 .body {
     background-color: rgb(120, 120, 240);
     margin: 0; /* Supprime la marge par défaut */
@@ -14,12 +19,8 @@
     margin-top: 40px;
     display: flex; /* Définit le bloc comme un conteneur flex */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
-}
-
-.bloc:hover {
     cursor: pointer;
 }
-
 
 .titre {
     font-family: Montserrat, sans-serif; /* Ajout de sans-serif comme police de secours */
@@ -30,9 +31,8 @@
 }
 
 .image-container {
-    display: flex;               /* Utiliser Flexbox pour aligner les enfants horizontalement */
+    display: flex;               /* Utiliser Flexbox pour aligner les éléments horizontalement */
     justify-content: space-around; /* Distribue l'espace entre les éléments */
-    align-items: flex-start;         /* Aligne les éléments verticalement au centre */
     padding: 20px;              /* Ajoute un peu d'espace autour des images */
     overflow: hidden;           /* Cache tout débordement */
 }
@@ -43,30 +43,15 @@
     text-align: center;         /* Centrer le texte des légendes sous les images */
 }
 
-.image-Nietzsche {
-    width: 500px; /* Largeur de l'image */
+.image-format1 {
+    width: 100%;
     height: auto; /* Conserve le rapport d'aspect */
     cursor: pointer;
     margin-top: 20px;
-
 }
 
-.image-Nietzsche:hover {
+.image-format1:hover {
     transform: scale(0.9); /* Augmente la taille de l'image de 10% lors du survol */
-    cursor: pointer; /* Change le curseur en mode pouce */
-    transition: transform 0.3s ease; /* Transition douce pour le changement de taille */
-}
-
-.image-Einstein {
-        width: 500px; /* Largeur de l'image */
-        height: auto; /* Conserve le rapport d'aspect */
-        cursor: pointer;
-        margin-top: 20px;
-}
-
-.image-Einstein:hover {
-    transform: scale(0.9); /* Augmente la taille de l'image de 10% lors du survol */
-    cursor: pointer; /* Change le curseur en mode pouce */
     transition: transform 0.3s ease; /* Transition douce pour le changement de taille */
 }
 
@@ -78,51 +63,14 @@
     margin: 0.5px auto; /* Centrer le conteneur avec un espacement vertical */
 }
 
-.legendephilo {
+.legende {
     font-family: Montserrat;
     font-size: 3rem;
     color: white;
     margin-top: 20px;
 }
 
-.legendesciences {
-    font-family: Montserrat;
-    font-size: 3rem;
-    color: white;
-    margin-top: 20px;
-}
-
-.legendehistoire {
-    font-family: Montserrat;
-    font-size: 3rem;
-    color: white;
-    margin-top: 20px;
-}
-
-.image-Napoleon {
-    width: 500px; /* Largeur de l'image */
-    height: auto; /* Conserve le rapport d'aspect */
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-.image-Napoleon:hover {
-    transform: scale(0.9); /* Augmente la taille de l'image de 10% lors du survol */
-    cursor: pointer; /* Change le curseur en mode pouce */
-    transition: transform 0.3s ease; /* Transition douce pour le changement de taille */
-}
-
-#quiz1 {
-    display: none; /* Masquer le quiz par défaut */
-    text-align: center;
-}
-
-#quiz2 {
-    display: none; /* Masquer le quiz par défaut */
-    text-align: center;
-}
-
-#quiz3 {
+.hide {
     display: none; /* Masquer le quiz par défaut */
     text-align: center;
 }
@@ -135,8 +83,9 @@
     border-radius: 12px; /* Coins arrondis */
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
-    flex: 0 1 calc(50% - 20px); /* Chaque bouton prend 50% de la largeur, moins l'espace */
-    margin-top: 200px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
 }   
 
 .bouton:hover {
@@ -144,71 +93,60 @@
     transform: scale(1.1); /* Augmente légèrement la taille au survol */
 }
 
-.question {
-    margin-top: 200px;
-    font-family: montserrat;
-    color: white;
-    text-align: center; /* Centre le texte */
+.retour {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
 }
 
-#successMessage, #feedbackMessage {
+.question {
+    display: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: montserrat;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#successMessage, 
+#feedbackMessage {
     display: none; /* Par défaut, caché */
-    font-size: 18px;
     margin-top: 20px;
     text-align: center;
 }
 
-#successMessage {
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    font-family: Montserrat;
-    margin-top: 200px;
-}
-
+#successMessage,
 #feedbackMessage {
-    color: rgb(255, 255, 255);
-    font-size: 2rem;
-    font-family: Montserrat;
-    margin-top: 200px;
+    display: none; /* Par défaut, caché */
+    display: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: montserrat;
+    color: white;
+    font-size: 30px;
 }
 
-#mauvaiseréponse {
-    margin-left: 660px;
-    margin-top: 40px;
-    width: 600px;
+.image-format {
+    display: flex;
+    justify-content: center;  
 }
 
-#bonneréponsequiz1 {
-    margin-left: 720px;
-    margin-top: 40px;
-    width: 500px;
+.mauvaiseréponsequiz3,
+.mauvaiseréponsequiz2,
+.mauvaiseréponsequiz1 {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
 }
 
-#bonneréponsequiz2 {
-    margin-left: 700px;
-    margin-top: 40px;
-    width: 500px;
-}
-#bonneréponsequiz3 {
-    margin-left: 720px;
-    margin-top: 40px;
-    width: 500px;
-}
-
-#mauvaiseréponsequiz1 {
-    margin-left: 720px;
-    margin-top: 40px;
-    width: 500px;
-}
-
-#mauvaiseréponsequiz2 {
-    margin-left: 720px;
-    margin-top: 40px;
-    width: 500px;
-}
-
-#mauvaiseréponsequiz3 {
-    margin-left: 580px;
-    margin-top: 40px;
-    width: 800px;
+.bonneréponsequiz1,
+.bonneréponsequiz2,
+.bonneréponsequiz3 {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
 }
