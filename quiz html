@@ -14,7 +14,6 @@
         <h1 class="titre">Quiz de culture générale</h1>
     </div>
 
-
     <!-- BLOC DES TROIS IMAGES -->
     <div    class="image-container" id="imageContainer">
         <figure class="image-item" >
@@ -62,9 +61,6 @@
     </div>
 </div>
 
-<button class="retour" id="retouraccueil" style="display: none">Retour à l'accueil</button>
-
-
 <div class="success" id="successMessage" style="display: none;"></div>
 <div class="feedback" id="feedbackMessage" style="display: none;"></div>
 
@@ -80,6 +76,19 @@
         <img    src="Leonardo_Phoenix_A_warm_and_cheerful_portrait_of_Albert_Einste_1.jpg" class="bonneréponsequiz2" style="display: none;" id="bonneréponsequiz2" >
         <img    src="Leonardo_Phoenix_Napolon_Bonaparte_depicted_with_a_warm_and_ch_0.jpg" class="bonneréponsequiz3" style="display: none;" id="bonneréponsequiz3" >
     </div>
+
+    <p id="bonneReponseMessage" style="display: none; color: white;"></p>
+
+
+    <div id="scoreFinal" style="display: none;">
+        Votre score final est : <span id="scoreValeur">0</span> / 10
+    </div>
+
+<div    id="retouraccueil" style="display: none;">
+    <button id="retour">Retour à l'accueil</button>
+</div>
+
+
 <script src="index.js"  defer></script>
 
 </body>
