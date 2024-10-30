@@ -77,9 +77,6 @@
         <img    src="Leonardo_Phoenix_Napolon_Bonaparte_depicted_with_a_warm_and_ch_0.jpg" class="bonneréponsequiz3" style="display: none;" id="bonneréponsequiz3" >
     </div>
 
-    <p id="bonneReponseMessage" style="display: none; color: white;"></p>
-
-
     <div id="scoreFinal" style="display: none;">
         Votre score final est : <span id="scoreValeur">0</span> / 10
     </div>
@@ -87,7 +84,6 @@
 <div    id="retouraccueil" style="display: none;">
     <button id="retour">Retour à l'accueil</button>
 </div>
-
 
 <script src="index.js"  defer></script>
 
