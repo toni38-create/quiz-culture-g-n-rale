@@ -140,7 +140,7 @@ html {
 .mauvaiseréponsequiz1 {
     width: 300px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .bonneréponsequiz1,
@@ -148,5 +148,32 @@ html {
 .bonneréponsequiz3 {
     width: 300px;
     height: auto;
-    margin-top: 20px;
+    margin-top: 50px;
+}
+
+#scoreFinal {
+    display: none; /* Par défaut, caché */
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+    font-family: montserrat;
+    color: white;
+    font-size: 30px;
+}
+
+#retour {
+    width: 330px;
+    height: 100px;
+    font-family: Montserrat;
+    font-size: 30px;
+    background-color: rgb(183, 121, 212);
+    border: 2px solid black;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    margin: auto; /* Centre le bloc horizontalement */
+    margin-top: 40px;
+    display: flex; /* Définit le bloc comme un conteneur flex */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    cursor: pointer;
 }
