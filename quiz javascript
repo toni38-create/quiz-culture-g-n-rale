@@ -428,7 +428,9 @@
                 } else {
                 // Afficher le message d'erreur
                 const bonneReponse = questions[quizId][questionIndex].answers[correctAnswer];
-                feedbackElement.innerText = `Mauvaise réponse ! La bonne réponse était : ${bonneReponse}`;
+                feedbackElement.innerText = `Mauvaise réponse ! 
+
+                La bonne réponse était : ${bonneReponse}`;
                 feedbackElement.style.display = 'block'; 
             
             // Affichage des images pour les mauvaises réponses
