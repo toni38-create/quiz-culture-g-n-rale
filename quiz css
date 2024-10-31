@@ -4,7 +4,7 @@ html {
 }
 
 .body {
-    background-color: rgb(120, 120, 240);
+    background-color: rgb(96, 96, 238);
     margin: 0; /* Supprime la marge par défaut */
 }
 
@@ -78,7 +78,6 @@ html {
 .bouton {
     background-color: rgb(77, 187, 77);
     font-size: 1.5rem; /* Taille du texte */
-    padding: 15px 80px; /* Espacement interne du bouton */
     font-family: Montserrat; 
     border-radius: 12px; /* Coins arrondis */
     cursor: pointer;
@@ -103,31 +102,24 @@ html {
 }
 
 .question {
-    display: center;
+    display: flex;
     justify-content: center;
     margin-top: 100px;
-    font-family: montserrat;
+    font-family: Montserrat;
     color: white;
     font-size: 30px;
-    padding: 20px;
-}
-
-#successMessage, 
-#feedbackMessage {
-    display: none; /* Par défaut, caché */
-    margin-top: 20px;
-    text-align: center;
+    padding: 50px;
 }
 
 #successMessage,
 #feedbackMessage {
-    display: none; /* Par défaut, caché */
-    display: center;
-    justify-content: center;
+    display: flex;
+    text-align: center;
     margin-top: 100px;
-    font-family: montserrat;
+    font-family: Montserrat;
     color: white;
     font-size: 30px;
+    padding: 50px;
 }
 
 .image-format {
@@ -135,20 +127,12 @@ html {
     justify-content: center;  
 }
 
-.mauvaiseréponsequiz3,
-.mauvaiseréponsequiz2,
-.mauvaiseréponsequiz1 {
-    width: 300px;
-    height: auto;
-    margin-top: 50px;
+.imagemauvaiseréponse {
+    width: 400px;
 }
 
-.bonneréponsequiz1,
-.bonneréponsequiz2,
-.bonneréponsequiz3 {
-    width: 300px;
-    height: auto;
-    margin-top: 50px;
+.imagebonneréponse {
+    width: 400px;
 }
 
 #scoreFinal {
