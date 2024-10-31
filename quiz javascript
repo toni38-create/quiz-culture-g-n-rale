@@ -62,50 +62,95 @@
     const questions = {
         quiz1: [
             {
-                question: "Quel philosophe a écrit 'Ainsi parlait Zarathoustra'?",
-                answers: ["Friedrich Nietzsche", "Platon", "Descartes", "Socrate"],
-                correct: 0
-            },
-            {
-                question: "Qui a écrit 'Tourne la page'?",
-                answers: ["Alexandre Dumas", "Squeezie", "Victor Hugo", "Michel Drucker"],
-                correct: 1
-            },
-            {
-                question: "Qui a écrit la citation 'L'enfer, c'est les autres'?",
-                answers: ["Michel Cymes", "Althusser", "Jean-Paul Sartre", "Simone de Beauvoir"],
+                question: "Dans quelle œuvre de Dostoïevski trouve-t-on le personnage de Raskolnikov, étudiant en droit tourmenté par ses dilemmes moraux?",
+                answers: ["Les Frères Karamazov", "L'Idiot", "Crime et Châtiment", "Les Démons"],
                 correct: 2
             },
             {
-                question: "D'après toi, qui a écrit le classique 'La Promesse de l'aube'?",
-                answers: ["Philippe Etchebest", "Gustave Flaubert", "Honoré de Balzac", "Romain Gary"],
-                correct: 3
-            },
-            {
-                question: "Où est né le philosophe Albert Camus ?",
-                answers: ["En Algérie", "Au Japon", "A Tourcoing", "A Villeurbanne à deux minutes du Transbo"],
+                question: "Quel philosophe a influencé Friedrich Nietzsche avec le concept du 'Surhomme'?",
+                answers: ["Arthur Schopenhauer", "Emmanuel Kant", "Platon", "Søren Kierkegaard"],
                 correct: 0
             },
             {
-                question: "Qui a écrit 'Si les meilleurs partent en premier, pourquoi suis-je toujours en vie ?'?",
-                answers: ["Paul Valéry", "Marcel Proust", "Booba", "Michel Drucker"],
+                question: "Qui a écrit 'De l'esprit des lois', une œuvre fondatrice de la théorie de la séparation des pouvoirs?",
+                answers: ["Voltaire", "Rousseau", "Montesquieu", "John Locke"],
                 correct: 2
             },
             {
-                question: "Quel livre a écrit Christine de Pizan ?",
-                answers: ["Le tueur aveugle", "La Cité des Dames", "L'étranger", "Je suis trop sexiste pour le savoir"],
-                correct: 1
+                question: "Dans 'La République' de Platon, quel est le but de l'allégorie de la caverne?",
+                answers: ["Illustrer la difficulté de trouver le bonheur","Critiquer la politique de son époque","Montrer la distinction entre le monde sensible et le monde des idées","Décrire les hiérarchies sociales de la Grèce antique"],
+                correct: 2
             },
             {
-                question: "Qui a écrit 'La beauté est dans les yeux de celui qui regarde'?",
-                answers: ["Cyril Hanouna", "Oscar Wilde", "Victor Hugo", "Kev Adams"],
-                correct: 1
-            },
-            {
-                question: "Par quoi commence le livre 'A la recherche du temps perdu'?",
-                answers: ["Longtemps, je me suis couché de bonne heure", "J’suis capable du meilleur, comme du pire Et c’est dans l’pire que j’suis le meilleur", "Appelons la femme un bel animal sans fourrure dont la peau est très recherchée.", "Quand je pense à tous les livres qu'il me reste à lire, j'ai la certitude d'être encore heureux."],
+                question: "Quel écrivain français a exploré l'absurde et le nihilisme dans son œuvre 'Le Mythe de Sisyphe'?",
+                answers: ["Albert Camus", "Jean-Paul Sartre", "Simone de Beauvoir", "André Malraux"],
                 correct: 0
-            }
+            },
+            {
+                question: "Dans 'Germinal' d'Émile Zola, quel mouvement social est décrit à travers la vie des mineurs?",
+                answers: [
+                            "Le syndicalisme révolutionnaire",
+                            "Le socialisme utopique",
+                            "Le communisme",
+                            "Le mouvement anarchiste"
+                        ],
+                correct: 2
+            },
+            {
+                question: "À quel mouvement littéraire appartiennent les œuvres de Marcel Proust et Virginia Woolf?",
+                answers: [
+                        "Existentialisme",
+                        "Symbolisme",
+                        "Nouveau roman",
+                        "Modernisme"
+                        ],
+                        correct: 3
+            },
+            {
+                question: "Quelle est la thèse centrale du 'Traité de la nature humaine' de David Hume?",
+                answers: [
+                    "L'importance de la liberté individuelle",
+                    "L'origine des connaissances dans l'expérience sensible",
+                    "La moralité comme expression de la rationalité",
+                    "L'existence de vérités innées"
+                         ],
+                        correct: 1
+            },
+            {
+                question: "Dans 'Ainsi parlait Zarathoustra', quelle idée centrale Friedrich Nietzsche introduit-il pour guider l'humanité?",
+                answers: [
+                    "Le nihilisme",
+                    "Le retour éternel",
+                    "La moralité des esclaves",
+                    "La volonté de puissance"
+                        ],
+                        correct: 3
+            },
+            {
+                question: "Quel ouvrage d’Albert Camus commence par la phrase 'Aujourd'hui, maman est morte.' ?",
+                answers: ["L'Étranger", "La Peste", "Les Justes", "Le Mythe de Sisyphe"],
+                correct: 0
+            },
+            {
+                question: "Dans 'Les Confessions', Jean-Jacques Rousseau décrit sa vie et ses idées. De quel siècle est-il ?",
+                answers: ["XVIIe siècle", "XVIIIe siècle", "XIXe siècle", "XVIe siècle"],
+                correct: 1
+            },
+            {
+                question: "Quel écrivain français est associé au courant du Nouveau Roman ?",
+                answers: ["Albert Camus", "Marguerite Duras", "André Gide", "Victor Hugo"],
+                correct: 1
+            },
+            {
+                question: "Quel roman de Franz Kafka met en scène un homme accusé sans savoir pourquoi ?",
+                answers: ["Le Château", "La Métamorphose", "Le Procès", "Amérique"],
+                correct: 2
+            },
+            {
+                question: "Qui a écrit 'Ainsi parlait Zarathoustra', une œuvre fondatrice de la philosophie moderne ?",
+                answers: ["Friedrich Nietzsche", "Arthur Schopenhauer", "Søren Kierkegaard", "Hegel"],
+                correct: 0
+            },
         ],
             quiz2: [
                 {
@@ -158,57 +203,122 @@
                     answers: ["Chromosome X", "Chromosome Y", "Chromosome 21", "Chromosome 22"],
                     correct: 1
                 },
+                {
+                    question: "Quel phénomène se produit lorsqu'une étoile massive explose en fin de vie, dispersant ses éléments dans l'espace ?",
+                    answers: ["Nova", "Supernova", "Éruption solaire", "Amas globulaire"],
+                    correct: 1
+                },
+                {
+                    question: "Quel est le nom de la galaxie la plus proche de la Voie lactée ?",
+                    answers: ["La galaxie d'Andromède", "La galaxie du Sombrero", "La nébuleuse d'Orion", "La galaxie du Triangle"],
+                    correct: 0
+                },
+                {
+                    question: "Quel type d'astre émet des ondes radio régulières, souvent interprétées comme des pulsations ?",
+                    answers: ["Étoile à neutrons", "Quasar", "Pulsar", "Amas stellaire"],
+                    correct: 2
+                },
+                {
+                    question: "Quelle théorie explique l'origine de l'univers comme une expansion rapide à partir d'un état extrêmement dense et chaud ?",
+                    answers: ["La théorie des cordes", "La relativité restreinte", "Le Big Bang", "La théorie des multivers"],
+                    correct: 2
+                },
+                {
+                    question: "Quel terme désigne une planète située en dehors de notre système solaire ?",
+                    answers: ["Exoplanète", "Astéroïde", "Planète naine", "Système binaire"],
+                    correct: 0
+                },
         ],
             quiz3: [
                 {
-                    question: "Qui a été le premier empereur de Rome?",
-                    answers: ["Jules César", "Auguste", "Néron", "Caligula"],
+                    question: "Quel traité signé en 843 a divisé l'Empire carolingien entre les petits-fils de Charlemagne ?",
+                    answers: ["Traité de Verdun", "Traité de Troyes", "Traité de Paris", "Traité de Westphalie"],
+                    correct: 0
+                },
+                {
+                    question: "Quel événement de 1517 marque le début de la Réforme protestante initiée par Martin Luther ?",
+                    answers: [
+                        "Le Concile de Trente",
+                        "La publication des 95 thèses",
+                        "La Paix d’Augsbourg",
+                        "La Guerre des Paysans"
+                            ],
                     correct: 1
                 },
                 {
-                    question: "Quelle bataille a marqué le début de la fin pour Napoléon Bonaparte?",
-                    answers: ["Bataille de Waterloo", "Bataille d'Austerlitz", "Bataille de Leipzig", "Bataille de Trafalgar"],
+                    question: "Quel roi anglais a instauré l'Acte de suprématie en 1534, marquant la rupture avec l'Église catholique ?",
+                    answers: ["Henri VII", "Henri VIII", "Édouard VI", "Jacques Ier"],
+                    correct: 1
+                },
+                {
+                    question: "Quel empire contrôlait la Route de la Soie jusqu'à sa chute face aux Mongols au XIIIe siècle ?",
+                    answers: ["Empire byzantin", "Empire chinois", "Empire khmer", "Empire perse"],
+                    correct: 3
+                },
+                {
+                    question: "Qui a fondé la dynastie des Capétiens en France en 987 ?",
+                    answers: ["Louis IV", "Hugues Capet", "Charlemagne", "Philippe Auguste"],
+                    correct: 1
+                },
+                {
+                    question: "Quel fut le principal rival militaire de la République romaine lors des guerres puniques ?",
+                    answers: ["Les Carthaginois", "Les Gaulois", "Les Égyptiens", "Les Parthes"],
                     correct: 0
                 },
                 {
-                    question: "Quel traité a mis fin à la Première Guerre mondiale?",
-                    answers: ["Traité de Versailles", "Traité de Trianon", "Traité de Saint-Germain", "Traité de paix de Paris"],
+                    question: "En quelle année la bataille de Hastings, marquant la conquête normande de l’Angleterre, a-t-elle eu lieu ?",
+                    answers: ["1066", "1215", "1328", "1415"],
                     correct: 0
                 },
                 {
-                    question: "Quelle révolution a eu lieu en France en 1789?",
-                    answers: ["Révolution américaine", "Révolution industrielle", "Révolution française", "Révolution russe"],
+                    question: "Quel empereur romain a divisé l'Empire en deux parties en 285, établissant la Tétrarchie ?",
+                    answers: ["Néron", "Constantin", "Dioclétien", "Augustin"],
                     correct: 2
                 },
                 {
-                    question: "Quel empire est connu pour ses routes, ses aqueducs et son système juridique influent?",
-                    answers: ["Empire romain", "Empire ottoman", "Empire mongol", "Empire perse"],
+                    question: "Quel événement de 1905 a marqué le début de l’affaiblissement de l'Empire russe avant la révolution de 1917 ?",
+                    answers: [
+                        "La défaite contre le Japon",
+                        "La révolution bolchevique",
+                        "Le traité de Brest-Litovsk",
+                        "La révolution de Février"
+                    ],
                     correct: 0
                 },
                 {
-                    question: "Qui était le leader sud-africain qui a lutté contre l'apartheid?",
-                    answers: ["Desmond Tutu", "Nelson Mandela", "F.W. de Klerk", "Thabo Mbeki"],
-                    correct: 1
-                },
-                {
-                    question: "Quelle civilisation ancienne a construit des pyramides à Gizeh?",
-                    answers: ["Les Grecs", "Les Romains", "Les Égyptiens", "Les Incas"],
+                    question: "Quel traité a mis fin à la guerre de Succession d'Espagne en 1713 ?",
+                    answers: [
+                        "Traité de Westphalie",
+                        "Traité de Versailles",
+                        "Traité d'Utrecht",
+                        "Traité de Fontainebleau"
+                        ],
                     correct: 2
                 },
                 {
-                    question: "Quel événement a été déclenché par l'assassinat de l'archiduc François-Ferdinand?",
-                    answers: ["La guerre froide", "La Première Guerre mondiale", "La Seconde Guerre mondiale", "La Révolution russe"],
+                    question: "En quelle année la Révolution industrielle a-t-elle commencé en Grande-Bretagne ?",
+                    answers: ["1750", "1780", "1800", "1820"],
                     correct: 1
                 },
                 {
-                    question: "Qui a écrit la Déclaration d'indépendance des États-Unis?",
-                    answers: ["George Washington", "Thomas Jefferson", "Benjamin Franklin", "John Adams"],
+                    question: "Quel empire, considéré comme 'le vieil homme malade de l'Europe', s’est effondré après la Première Guerre mondiale ?",
+                    answers: ["Empire austro-hongrois", "Empire ottoman", "Empire russe", "Empire allemand"],
                     correct: 1
                 },
                 {
-                    question: "Quelle était la principale cause de la chute de l'Empire romain?",
-                    answers: ["La peste noire", "Les invasions barbares", "Les guerres civiles", "La corruption"],
+                    question: "Quel explorateur a mené la première expédition autour du monde au XVIe siècle ?",
+                    answers: ["Vasco de Gama", "Christophe Colomb", "Ferdinand Magellan", "James Cook"],
+                    correct: 2
+                },
+                {
+                    question: "Quelle guerre civile a eu lieu en Angleterre au XVIIe siècle, opposant les royalistes aux parlementaires ?",
+                    answers: ["Guerre des Deux Roses", "Guerre civile anglaise", "Guerre de Cent Ans", "Rébellion des barons"],
                     correct: 1
+                },
+                {
+                    question: "Quel événement en 1453 marque la fin de l'Empire byzantin ?",
+                    answers: ["La chute de Constantinople", "La bataille de Poitiers", "La découverte de l'Amérique", "La Réforme protestante"],
+                    correct: 0
                 },
             ],
     };
@@ -264,7 +374,6 @@
         // Variable pour le score 
         let score = 0;
     
-    
         // Fonction pour placer le message de succès
         function verifierReponse(quizId, questionIndex, answerIndex) {
         const correctAnswer = questions[quizId][questionIndex].correct;
@@ -315,7 +424,7 @@
                     currentQuestionIndex = 0; // Réinitialiser pour le prochain quiz
 
                 }
-            }, 2400); // Délai de 2 secondes 40 avant de passer à la suite 
+            }, 1000); // Délai de 2 secondes 40 avant de passer à la suite 
                 } else {
                 // Afficher le message d'erreur
                 const bonneReponse = questions[quizId][questionIndex].answers[correctAnswer];
