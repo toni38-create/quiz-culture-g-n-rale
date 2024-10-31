@@ -4,28 +4,29 @@ html {
 }
 
 .body {
-    background-color: rgb(96, 96, 238);
+    background-color: rgb(107, 107, 252);
     margin: 0; /* Supprime la marge par défaut */
 }
 
 .bloc {
     width: 500px;
     height: 150px;
-    background-color: rgb(183, 121, 212);
-    border: 2px solid black;
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
+    border-radius: 12px; /* Coins arrondis */
     justify-content: center;
     align-items: center;
     margin: auto; /* Centre le bloc horizontalement */
     margin-top: 40px;
     display: flex; /* Définit le bloc comme un conteneur flex */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); /* Ombre */
     cursor: pointer;
 }
 
 .titre {
     font-family: Montserrat, sans-serif; /* Ajout de sans-serif comme police de secours */
     font-size: 3rem;
-    color: white;
+    color: rgb(41, 41, 41);
     margin: auto; /* Centre le titre à l'intérieur du bloc */
     text-align: center;
 }
@@ -64,10 +65,15 @@ html {
 }
 
 .legende {
-    font-family: Montserrat;
+    font-family: Montserrat ;
+    font-weight: 700;
     font-size: 3rem;
-    color: white;
+    color: rgb(41, 41, 41);
     margin-top: 20px;
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+    border-radius: 12px; /* Coins arrondis */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
 }
 
 .hide {
@@ -76,9 +82,12 @@ html {
 }
 
 .bouton {
-    background-color: rgb(77, 187, 77);
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
     font-size: 1.5rem; /* Taille du texte */
     font-family: Montserrat; 
+    font-weight: 700;
+
     border-radius: 12px; /* Coins arrondis */
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
@@ -88,7 +97,8 @@ html {
 }   
 
 .bouton:hover {
-    background-color: #f87e7e; /* Couleur au survol (plus foncée) */
+    color: rgb(243, 243, 243);
+    background-color: rgb(58, 150, 74);
     transform: scale(1.1); /* Augmente légèrement la taille au survol */
 }
 
