@@ -1,3 +1,4 @@
+
 html {
     box-sizing: content-box;
     width: 100%;
@@ -45,7 +46,7 @@ html {
 }
 
 .image-format1 {
-    width: 100%;
+    width: 80%;
     height: auto; /* Conserve le rapport d'aspect */
     cursor: pointer;
     margin-top: 20px;
@@ -67,7 +68,7 @@ html {
 .legende {
     font-family: Montserrat ;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgb(41, 41, 41);
     margin-top: 20px;
     background-color: rgb(243, 243, 243);
@@ -113,7 +114,7 @@ html {
 
 .question {
     display: flex;
-    justify-content: center;
+   justify-content: center;
     margin-top: 100px;
     font-family: Montserrat;
     color: white;
@@ -125,8 +126,9 @@ html {
 #feedbackMessage {
     display: flex;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     font-family: Montserrat;
+    font-weight: 700;
     color: white;
     font-size: 30px;
     padding: 50px;
@@ -138,11 +140,11 @@ html {
 }
 
 .imagemauvaiseréponse {
-    width: 400px;
+    width: 250px;
 }
 
 .imagebonneréponse {
-    width: 400px;
+    width: 300px;
 }
 
 #scoreFinal {
@@ -170,4 +172,15 @@ html {
     display: flex; /* Définit le bloc comme un conteneur flex */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
     cursor: pointer;
+}
+
+.temps {
+    display: flex;
+    text-align: right;
+    margin-top: -200px;
+    margin-right: 90px;
+    font-family: Montserrat;
+    color: white;
+    font-size: 100px;
+    padding: 50px;
 }
