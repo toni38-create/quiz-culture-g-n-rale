@@ -315,7 +315,6 @@
             if (tempsquestion <= 0) {
                 clearInterval(timerID);  // Arrête le timer
                 questionIndex++;  // Incrémente l'index pour la prochaine question
- 
                 
                 // Vérifiez si la question suivante existe
                 if (questionIndex < questions[quizId].length) {
@@ -366,7 +365,6 @@
             };
         });
     
-         
     }
     // Variable pour le score 
     let score = 0;
@@ -389,10 +387,16 @@
             // Affichage des images de succès
             if (quizId === 'quiz1') {
                 document.getElementById('bonneréponsequiz1').style.display = 'block'; // Affiche l'image pour quiz 1
+                document.getElementById('timer').style.display = 'none'; // Affiche l'image pour quiz 1
+
             } else if (quizId === 'quiz2') {
                 document.getElementById('bonneréponsequiz2').style.display = 'block'; // Affiche l'image pour quiz 2
+                document.getElementById('timer').style.display = 'none'; // Affiche l'image pour quiz 1
+
             } else if (quizId === 'quiz3') {
                 document.getElementById('bonneréponsequiz3').style.display = 'block'; // Affiche l'image pour quiz 3
+                document.getElementById('timer').style.display = 'none'; // Affiche l'image pour quiz 1
+
             }
             
             // Masquer le message après 1 seconde et passer à la question suivante
@@ -417,6 +421,8 @@
                     document.getElementById('scoreValeur').innerText = score;
                     document.getElementById('scoreFinal').style.display = 'block';
                     document.getElementById('retouraccueil').style.display = 'block';
+                    document.getElementById('timer').style.display = 'none';
+
                     currentQuestionIndex = 0; // Réinitialiser pour le prochain quiz
                     
                 }
@@ -432,10 +438,16 @@
             // Affichage des images pour les mauvaises réponses
             if (quizId === 'quiz1') {
                 document.getElementById('mauvaiseréponsequiz1').style.display = 'block'; // Affiche l'image pour quiz 1
+                document.getElementById('timer').style.display = 'none'; // Affiche l'image pour quiz 1
+
             } else if (quizId === 'quiz2') {
                 document.getElementById('mauvaiseréponsequiz2').style.display = 'block'; // Affiche l'image pour quiz 2
+                document.getElementById('timer').style.display = 'none'; // Affiche l'image pour quiz 1
+
             } else if (quizId === 'quiz3') {
                 document.getElementById('mauvaiseréponsequiz3').style.display = 'block'; // Affiche l'image pour quiz 3
+                document.getElementById('timer').style.display = 'none'; // Affiche l'image pour quiz 1
+
             }
             
             // Masquer le message après 2 secondes et passer à la question suivante
@@ -462,6 +474,8 @@
                     document.getElementById('scoreValeur').innerText = score;
                     document.getElementById('scoreFinal').style.display = 'block';
                     document.getElementById('retouraccueil').style.display = 'block';
+                    document.getElementById('timer').style.display = 'none';
+
                     
                     currentQuestionIndex = 0; // Réinitialiser pour le prochain quiz
                 }
@@ -475,5 +489,7 @@
         document.getElementById('imageContainer').style.display = 'flex';
         document.getElementById('retouraccueil').style.display = 'none';
         document.getElementById('scoreFinal').style.display = 'none';
+        document.getElementById('timer').style.display = 'none';
+
     });
     
