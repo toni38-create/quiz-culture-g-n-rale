@@ -330,13 +330,17 @@ function startTimer(quizId, questionIndex) {
             } else {
                 // Si c'est la dernière question, cache le timer
                 timerDiv.style.display = 'none'; 
+                endQuiz();  // Appel à la fonction de fin de quiz
             }
         }
-    }, 1000); 
-} // Appelle la fonction toutes les secondes
+    }, 1000);  // Appelle la fonction toutes les secondes
 
     return timerID;
 
+    function endQuiz() {
+        document.getElementById('questionnombre').style.display = "none"
+    }
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -489,7 +493,9 @@ document.getElementById('retouraccueil').addEventListener('click', function() {
     document.getElementById('retouraccueil').style.display = 'none';
     document.getElementById('scoreFinal').style.display = 'none';
     document.getElementById('timer').style.display = 'none';
+    document.getElementById('timer').style.display = 'none';
     document.getElementById('questionnombre').style.display = 'none';
+
 });
 
 ///////////////////////// COMPTEUR DE QUESTIONS //////////////////////////////////
