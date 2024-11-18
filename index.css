@@ -184,3 +184,12 @@ html {
     font-size: 100px;
     padding: 50px;
 }
+
+.nombrequestion {
+    position: fixed;
+    bottom: 10px;             /* Espace entre le texte et le bas de l'écran */
+    right: 20px;    
+    font-family: Montserrat;
+    color: white;
+    font-size: 50px;
+}
