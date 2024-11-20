@@ -37,11 +37,10 @@ let currentQuiz = "quiz1"; // Commence avec le premier quiz
 
 points = 0; // Réinitialiser les points au début du quiz
 
-///////////////////////////////////// TIMER ///////////////////////////////////////////////////
+////////////////////////////////////////// TIMER ///////////////////////////////////////////////////
 
 // ID du quiz et index de la question
 let questionIndex = 0; // Commence à 0 pour la première question
-
 
 // Fonction pour démarrer le timer
 function startTimer(quizId, questionIndex) {
@@ -54,7 +53,7 @@ function startTimer(quizId, questionIndex) {
     let tempsquestion = 10;  // Réinitialise le temps à 10 secondes pour chaque nouvelle question
     timerDiv.innerText = tempsquestion;  // Affiche le temps initial
 
-    let timerID; // Déclaré globalement pour être accessible dans tout le script
+    let timerID; // VARIABLE DE TIMER ID 
 
      timerID = setInterval(() => {
         tempsquestion -= 1;
@@ -70,14 +69,13 @@ function startTimer(quizId, questionIndex) {
             } else {
                 // Si c'est la dernière question, cache le timer
                 timerDiv.style.display = 'none'; 
+                clearInterval(timerID);
             }
         }
     }, 1000);  // Appelle la fonction toutes les secondes
 
     return timerID;
 }
-
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -113,7 +111,7 @@ function afficherQuestion(quizId, questionIndex, intervalID = null) {
 // Variable pour le score 
 let score = 0;
 
-    //////////////////////////////////// GESTION DES GIFS SUCCES ET ERREURS /////////////////////////////////////////////////////////
+///////////////////////////////////////// GESTION DES GIFS SUCCES ET ERREURS /////////////////////////////////////////////////////////
 
     // Fonction pour placer le message de succès
 function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
@@ -218,8 +216,6 @@ function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
                 document.getElementById('scoreFinal').style.display = 'block';
                 document.getElementById('retouraccueil').style.display = 'block';
                 document.getElementById('timer').style.display = 'none';
-                clearInterval(timerID);
-
             }
         }, 2400); // Délai de 2 secondes 40 avant de passer à la suite
     }
@@ -241,7 +237,7 @@ document.getElementById('retouraccueil').addEventListener('click', function() {
 /////////////////////////////////////////// COMPTEUR DE QUESTIONS ///////////////////////////////////////////////////////////
 
 function avancerQuestion(quizId, questionIndex) {
-    if (questionIndex + 1 < questions[quizId].length) 
+    if (questionIndex + 1 <= questions[quizId].length) 
     {
         let questionLength = questions[quizId].length;
         updateQuestionCounter(questionIndex + 1, questionLength); // Mettre à jour le compteur
