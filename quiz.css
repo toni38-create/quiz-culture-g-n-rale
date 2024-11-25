@@ -1,0 +1,216 @@
+.body {
+    background-color: rgb(120, 120, 240);
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+.bloc {
+    width: 500px;
+    height: 150px;
+    background-color: rgb(183, 121, 212);
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centre le bloc horizontalement */
+    margin-top: 40px;
+    display: flex; /* Définit le bloc comme un conteneur flex */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+}
+
+/* Ici ça marche mais tu peux mettre cursor: pointer dans le .bloc au dessus. Ca s'appliquera tout le temps. */
+.bloc:hover {
+    cursor: pointer;
+}
+
+
+.titre {
+    font-family: Montserrat, sans-serif; /* Ajout de sans-serif comme police de secours */
+    font-size: 3rem;
+    color: white;
+    margin: auto; /* Centre le titre à l'intérieur du bloc */
+    text-align: center;
+}
+
+.image-container {
+    display: flex; /* Utiliser Flexbox pour aligner les enfants horizontalement */
+    justify-content: space-around; /* Distribue l'espace entre les éléments */
+    align-items: flex-start; /* Aligne les éléments verticalement au centre */
+    padding: 20px; /* Ajoute un peu d'espace autour des images */
+    overflow: hidden; /* Cache tout débordement */
+}
+
+.image-item {
+    flex: 1; /* Chaque image prend une part égale de l'espace disponible */
+    margin: 0 10px; /* Marge entre les images */
+    text-align: center; /* Centrer le texte des légendes sous les images */
+}
+
+/*
+les classes sont à utiliser quand tu veux appliquer un même style à plusieurs éléments
+typiquement la taille des images, ont veut la même pour les 3 images donc on peut créer une classe qu'on va appeler pour les 3
+*/
+
+.image-format {
+    width: 500px; /* Largeur de l'image */
+    height: auto; /* Conserve le rapport d'aspect */
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.image-format:hover {
+    transform: scale(0.9); /* Augmente la taille de l'image de 10% lors du survol */
+    cursor: pointer; /* Change le curseur en mode pouce */
+    transition: transform 0.3s ease; /* Transition douce pour le changement de taille */
+}
+
+
+/* la classe .image-format permet de factoriser le css de .image-Nietzsche, .image-Einstein et .image-Napoleon
+    idem pour le hover.
+    Il faut essayer d'éviter les duplications de code quand c'est possible.
+
+.image-Nietzsche {
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.image-Nietzsche:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-Einstein {
+        width: 500px;
+        height: auto;
+        cursor: pointer;
+        margin-top: 20px;
+}
+
+
+.image-Einstein:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+*/
+
+.legende-container {
+    display: flex; /* Utilise Flexbox pour disposer les images horizontalement */
+    justify-content: center; /* Espace les images avec des marges égales */
+    align-items: center; /* Centre verticalement les éléments (images et légendes) */
+    width: 100%; /* Prend toute la largeur disponible */
+    margin: 0.5px auto; /* Centrer le conteneur avec un espacement vertical */
+}
+/** Ici pareil tu peux factoriser **/
+.legende {
+    font-family: Montserrat, serif; /* ajout du nom générique*/
+    font-size: 3rem;
+    color: white;
+    margin-top: 20px;
+}
+/*
+.legende-philo {
+    font-family: Montserrat;
+    font-size: 3rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.legende-sciences {
+    font-family: Montserrat;
+    font-size: 3rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.legende-histoire {
+    font-family: Montserrat;
+    font-size: 3rem;
+    color: white;
+    margin-top: 20px;
+}
+*/
+/*
+.image-Napoleon {
+    width: 500px;
+    height: auto;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.image-Napoleon:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+*/
+
+#quiz1 {
+    display: none; /* Masquer le quiz par défaut */
+    text-align: center;
+}
+
+#quiz2 {
+    display: none; /* Masquer le quiz par défaut */
+    text-align: center;
+}
+
+#quiz3 {
+    display: none; /* Masquer le quiz par défaut */
+    text-align: center;
+}
+
+.bouton {
+    background-color: rgb(77, 187, 77);
+    font-size: 1.5rem; /* Taille du texte */
+    padding: 15px 80px; /* Espacement interne du bouton */
+    font-family: Montserrat, serif;
+    border-radius: 12px; /* Coins arrondis */
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
+    flex: 0 1 calc(50% - 20px); /* Chaque bouton prend 50% de la largeur, moins l'espace */
+    margin-top: 200px;
+}
+
+.bouton:hover {
+    background-color: #f87e7e; /* Couleur au survol (plus foncée) */
+    transform: scale(1.1); /* Augmente légèrement la taille au survol */
+}
+
+.question {
+    margin-top: 200px;
+    font-family: montserrat, serif;
+    color: white;
+    text-align: center; /* Centre le texte */
+}
+
+#successMessage, #feedbackMessage {
+    display: none; /* Par défaut, caché */
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#successMessage {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: Montserrat, serif;
+    margin-top: 200px;
+}
+
+#feedbackMessage {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-family: Montserrat, serif;
+    margin-top: 200px;
+}
+
+/* ici aussi on factorise avec une classe plutôt que plusieurs ids */
+/* */
+.answer {
+    display: block;
+    margin: 40px auto;
+    width: 500px;
+}

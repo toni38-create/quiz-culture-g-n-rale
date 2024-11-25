@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- J'ai renomé tes fichiers avec les bonnes extensions, en plus comme ça c'est plus lisible pour les IDE (genre visual studio code)-->
+        <link rel="stylesheet" href="quiz.css">
+        <title>projet web</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body class="body">
+
+        <!-- BLOC DU DEBUT -->
+        <div class="bloc" id="bloc1">
+            <h1 class="titre">Quiz de culture générale</h1>
+        </div>
+        <!--
+        Pour le naming des classes et id les conventions veulent que pour les classes quand elles sont en 2 mots on met soit un - soit un _
+        mais pour les ids vaut mieux utiliser du camelCase c.a.d on met une majuscule pour le deuxième mot
+        -->
+        <!-- BLOC DES TROIS IMAGES -->
+        <div class="image-container" id="imageContainer">
+            <figure class="image-item">
+                <!-- Pour les images il faut donner des liens vers des fichiers qui sont aussi dans ton repo sinon quand quelqu'un récupère le projet il ne les voit pas -->
+                <img src="assets/images/nietzsche.jpg" class="image-format"
+                     id="imageNietzsche">
+                <!-- En html les id doivent toujours être unique, de plus la tu ne l'utilise pas dans ton html ou dans ton js donc pas besoin de mettre d'id -->
+                <figcaption class="legende" id="legendephilo">Lettres et philosophie</figcaption>
+            </figure>
+
+            <figure class="image-item">
+                <img src="assets/images/einstein.jpg" class="image-format"
+                     id="imageEinstein">
+                <!-- idem -->
+                <figcaption class="legende" id="legendephilo">Sciences</figcaption>
+
+            </figure>
+
+            <figure class="image-item">
+                <img src="assets/images/bonaparte.jpg" class="image-format"
+                     id="imageNapoleon">
+                <!-- idem -->
+                <figcaption class="legende" id="legendephilo">Histoire</figcaption>
+
+            </figure>
+        </div>
+
+        <!-- BLOC DU QUESTIONNAIRE -->
+
+        <div class="quiz-container" id="quizContainer">
+            <div id="quiz1">
+                <h1 class="question" id="questionPhilo"></h1>
+                <button class="bouton">Réponse 1</button>
+                <button class="bouton">Réponse 2</button>
+                <button class="bouton">Réponse 3</button>
+                <button class="bouton">Réponse 4</button>
+            </div>
+
+            <div id="quiz2">
+                <h1 class="question" id="questionSciences"></h1>
+                <button class="bouton">Réponse 1</button>
+                <button class="bouton">Réponse 2</button>
+                <button class="bouton">Réponse 3</button>
+                <button class="bouton">Réponse 4</button>
+            </div>
+
+            <div id="quiz3">
+                <h1 class="question" id="questionHistoire"></h1>
+                <button class="bouton">Réponse 1</button>
+                <button class="bouton">Réponse 2</button>
+                <button class="bouton">Réponse 3</button>
+                <button class="bouton">Réponse 4</button>
+            </div>
+        </div>
+        <div class="success" id="successMessage" style="display: none;"></div>
+        <div class="feedback" id="feedbackMessage" style="display: none;"></div>
+
+        <!-- IMAGE MAUVAISE REPONSE -->
+        <!--
+         Si tu ne veux pas mettre des images dans un dossier en local tu peux aussi mettre des liens externe
+         Tant que l'utilisateur à une connection internet les immages s'afficherons
+        -->
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazYzOXM0cnFwZzl3ZWs1Y2IxbTI3eGY5MXlvbGhkanB5aGI1bmZoeiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JDbx0yICUNdPW/giphy.webp" class="answer" style="display: none;" id="mauvaiseréponsequiz1">
+        <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDJoZnh3ZmVpcW83bGYydDRmN3FscGQ4YXFyYWw3cXdseHdrbWJ1biZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ljtfkyTD3PIUZaKWRi/200.webp" class="answer" style="display: none;" id="mauvaiseréponsequiz2">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWpwdmUybjIxa2s0MnljbDdmaXNrYTBnMDV0bTJpdWhnNjI2dWJyaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tE6yuUPFpbM7v8Y1qU/giphy.webp" class="answer" style="display: none;" id="mauvaiseréponsequiz3">
+
+        <!-- IMAGES BONNE REPONSE -->
+        <img src="https://media4.giphy.com/media/q1lbSmMBXK2OZPCuSl/giphy.webp?cid=790b7611yfyxjxwkiyd6n9fnkqe7cridmpr67j3817li6c5r&ep=v1_gifs_search&rid=giphy.webp&ct=g" class="answer"
+             style="display: none;" id="bonneréponsequiz1" >
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamQ1ZjVuZGNpeXlqaXg4YzF6bzZuOGtpY2IzYWw4OXcxbHRsNGF0ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/NS7Ai5yTyG5kA/giphy.webp" class="answer"
+             style="display: none;" id="bonneréponsequiz2">
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWxjb3MzZWQyMmw0aHc5bWhpajdnb21qMWdjZTZndTNxcmNvbjdrNiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/82OVVRy2EDC0LLGayX/giphy.webp" class="answer"
+             style="display: none;" id="bonneréponsequiz3">
+        <script src="quiz.js" defer></script>
+    </body>
+</html>
