@@ -1,0 +1,152 @@
+html {
+    box-sizing: content-box;
+    width: 100%;
+}
+
+.body {
+    background-color: rgb(120, 120, 240);
+    margin: 0; /* Supprime la marge par défaut */
+}
+
+.bloc {
+    width: 500px;
+    height: 150px;
+    background-color: rgb(183, 121, 212);
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Centre le bloc horizontalement */
+    margin-top: 40px;
+    display: flex; /* Définit le bloc comme un conteneur flex */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    cursor: pointer;
+}
+
+.titre {
+    font-family: Montserrat, sans-serif; /* Ajout de sans-serif comme police de secours */
+    font-size: 3rem;
+    color: white;
+    margin: auto; /* Centre le titre à l'intérieur du bloc */
+    text-align: center;
+}
+
+.image-container {
+    display: flex;               /* Utiliser Flexbox pour aligner les éléments horizontalement */
+    justify-content: space-around; /* Distribue l'espace entre les éléments */
+    padding: 20px;              /* Ajoute un peu d'espace autour des images */
+    overflow: hidden;           /* Cache tout débordement */
+}
+
+.image-item {
+    flex: 1;                    /* Chaque image prend une part égale de l'espace disponible */
+    margin: 0 10px;            /* Marge entre les images */
+    text-align: center;         /* Centrer le texte des légendes sous les images */
+}
+
+.image-format1 {
+    width: 100%;
+    height: auto; /* Conserve le rapport d'aspect */
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.image-format1:hover {
+    transform: scale(0.9); /* Augmente la taille de l'image de 10% lors du survol */
+    transition: transform 0.3s ease; /* Transition douce pour le changement de taille */
+}
+
+.legende-container {
+    display: flex; /* Utilise Flexbox pour disposer les images horizontalement */
+    justify-content: center; /* Espace les images avec des marges égales */
+    align-items: center; /* Centre verticalement les éléments (images et légendes) */
+    width: 100%; /* Prend toute la largeur disponible */
+    margin: 0.5px auto; /* Centrer le conteneur avec un espacement vertical */
+}
+
+.legende {
+    font-family: Montserrat;
+    font-size: 3rem;
+    color: white;
+    margin-top: 20px;
+}
+
+.hide {
+    display: none; /* Masquer le quiz par défaut */
+    text-align: center;
+}
+
+.bouton {
+    background-color: rgb(77, 187, 77);
+    font-size: 1.5rem; /* Taille du texte */
+    padding: 15px 80px; /* Espacement interne du bouton */
+    font-family: Montserrat; 
+    border-radius: 12px; /* Coins arrondis */
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+}   
+
+.bouton:hover {
+    background-color: #f87e7e; /* Couleur au survol (plus foncée) */
+    transform: scale(1.1); /* Augmente légèrement la taille au survol */
+}
+
+.retour {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.question {
+    display: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: montserrat;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+
+#successMessage, 
+#feedbackMessage {
+    display: none; /* Par défaut, caché */
+    margin-top: 20px;
+    text-align: center;
+}
+
+#successMessage,
+#feedbackMessage {
+    display: none; /* Par défaut, caché */
+    display: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: montserrat;
+    color: white;
+    font-size: 30px;
+}
+
+.image-format {
+    display: flex;
+    justify-content: center;  
+}
+
+.mauvaiseréponsequiz3,
+.mauvaiseréponsequiz2,
+.mauvaiseréponsequiz1 {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.bonneréponsequiz1,
+.bonneréponsequiz2,
+.bonneréponsequiz3 {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
