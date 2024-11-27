@@ -91,10 +91,11 @@ document.getElementById('quiz3-difficult' || 'quiz3').addEventListener('click', 
 
 //////////////// Fonction faire apparaitre la question ////////////////
 
+
 function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
 
     clearInterval(intervalID);
-
+    // Faire apparaitre le compteur de questions 
     document.getElementById('questionNombre').style.display = 'block';
 
     avancerQuestion(quizId, niveau, questionIndex);
@@ -117,6 +118,7 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
     else if (quizId === 'quiz3') {
         questionElement = document.getElementById('questionHistoire');
     }
+
     
     // Sélectionne tous les boutons associés à ce quiz pour les mettre à jour
     const buttons = document.querySelectorAll(`#${quizId} .bouton`);
@@ -142,7 +144,9 @@ points = 0; // Réinitialiser les points au début du quiz
 ////////////////////////////////////////// TIMER ///////////////////////////////////////////////////
 
 // ID du quiz et index de la question
-let questionIndex = 0; // Commence à 0 pour la première question
+let questionIndex = 0; 
+
+let niveau = "easy";
 
 // Fonction pour démarrer le timer
 function startTimer(quizId, questionIndex) {
@@ -166,8 +170,11 @@ function startTimer(quizId, questionIndex) {
             questionIndex++;  // Incrémente l'index pour la prochaine question
 
             // Vérifiez si la question suivante existe
-            if (questionIndex < questions[quizId].length) {
-                afficherQuestion(quizId, questionIndex);  // Affiche la nouvelle question
+            if (questionIndex < questions[quizId][niveau].length) {
+                console.log();
+                afficherQuestion(quizId, niveau, questionIndex);  // Affiche la nouvelle question
+                console.log(afficherQuestion);
+
             } else {
                 // Si c'est la dernière question, cache le timer
                 timerDiv.style.display = 'none'; 
