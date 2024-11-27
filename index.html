@@ -35,6 +35,27 @@
             <figcaption class="legende"    id="legendePhilo">Histoire</figcaption>
         </figure>
     </div>
+
+    <!-- BLOC DES TROIS NIVEAUX DE DIFFICULTE -->
+
+    <div class="cadreniveau" id="cadreNiveau" style="display:none">
+        <h1 class="titreniveau">Niveaux de difficulté</h1>
+    </div>
+    <div class="containerniveau" id="containerNiveauquiz1" style="display:none" >
+            <button id="quiz1-easy" class="niveau">Niveau 1</button>
+            <button id="quiz1-medium" class="niveau">Niveau 2</button>
+            <button id="quiz1-difficult" class="niveau">Niveau 3</button>
+        </div>
+        <div class="containerniveau" id="containerNiveauquiz2" style="display:none" >
+            <button id="quiz2-easy" class="niveau">Niveau 1</button>
+            <button id="quiz2-medium" class="niveau">Niveau 2</button>
+            <button id="quiz2-difficult" class="niveau">Niveau 3</button>
+        </div>
+        <div class="containerniveau" id="containerNiveauquiz3" style="display:none" >
+            <button id="quiz3-easy" class="niveau">Niveau 1</button>
+            <button id="quiz3-medium" class="niveau">Niveau 2</button>
+            <button id="quiz3-difficult" class="niveau">Niveau 3</button>
+        </div>
     
      <!-- BLOC DU QUESTIONNAIRE -->
 
@@ -45,12 +66,12 @@
     </div>
         <div class="row">
     <div class="colonne1">
-        <button  class="bouton" ></button>
-        <button  class="bouton" ></button>
+        <button  class="bouton" id="option1"></button>
+        <button  class="bouton" id="option2"></button>
     </div>
     <div class="colonne2">
-            <button  class="bouton" ></button>
-            <button  class="bouton" ></button>
+            <button  class="bouton" id="option3"></button>
+            <button  class="bouton" id="option4" ></button>
         </div>
     </div>
 </div>
@@ -96,14 +117,14 @@
 
         <!-- IMAGE MAUVAISE REPONSE -->
     <div    class="image-format">
-        <img    src="hysterical-laughter.gif" class="imagemauvaiseréponse" style="display: none;" id="mauvaiseRéponsequiz1" >
-        <img    src="200w (1).gif" class="imagemauvaiseréponse" style="display: none;" id="mauvaiseRéponsequiz2" >
-        <img    src="giphy.gif" class="imagemauvaiseréponse" style="display: none;" id="mauvaiseRéponsequiz3" >
+        <img    src="hysterical-laughter.gif" class="imagemauvaiseréponse" style="display: none;" id="mauvaiseRéponseQuiz1" >
+        <img    src="200w (1).gif" class="imagemauvaiseréponse" style="display: none;" id="mauvaiseRéponseQuiz2" >
+        <img    src="giphy.gif" class="imagemauvaiseréponse" style="display: none;" id="mauvaiseRéponseQuiz3" >
    
         <!-- IMAGES BONNE REPONSE -->
-        <img    src="Leonardo_Phoenix_Friedrich_Nietzsche_a_19thcentury_German_phil_2.jpg" class="imagebonneréponse" style="display: none;" id="bonneRéponsequiz1" >
-        <img    src="Leonardo_Phoenix_A_warm_and_cheerful_portrait_of_Albert_Einste_1.jpg" class="imagebonneréponse" style="display: none;" id="bonneRéponsequiz2" >
-        <img    src="Leonardo_Phoenix_Napolon_Bonaparte_depicted_with_a_warm_and_ch_0.jpg" class="imagebonneréponse" style="display: none;" id="bonneRéponsequiz3" >
+        <img    src="Leonardo_Phoenix_Friedrich_Nietzsche_a_19thcentury_German_phil_2.jpg" class="imagebonneréponse" style="display: none;" id="bonneRéponseQuiz1" >
+        <img    src="Leonardo_Phoenix_A_warm_and_cheerful_portrait_of_Albert_Einste_1.jpg" class="imagebonneréponse" style="display: none;" id="bonneRéponseQuiz2" >
+        <img    src="Leonardo_Phoenix_Napolon_Bonaparte_depicted_with_a_warm_and_ch_0.jpg" class="imagebonneréponse" style="display: none;" id="bonneRéponseQuiz3" >
     </div>
 
     <div id="scoreFinal" style="display: none;" class="scorefinal">
@@ -119,7 +140,6 @@
 
 <script src="index.js"  defer></script>
 <script src="data.js"  defer></script>
-
 
 </body>
 </html>
