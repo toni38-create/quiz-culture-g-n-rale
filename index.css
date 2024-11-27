@@ -80,18 +80,20 @@ html {
     display: none; /* Masquer le quiz par défaut */
     text-align: center;
 }
-
+/* BOUTONS DES REPONSES */
 .bouton {
+    display: inline-block;
     color: rgb(41, 41, 41);
     background-color: rgb(243, 243, 243);
-    font-size: 30px;
+    font-size: 25px;
     font-family: Montserrat; 
     font-weight: 700;
     border-radius: 12px; /* Coins arrondis */
     cursor: pointer;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
     padding: 20px;
-    width: 500px;
+    width: auto;
+    max-width: 100%;
     height: auto; /* Permet au contenu de s'adapter */
 }   
 
@@ -101,14 +103,66 @@ html {
     transform: scale(1.1); /* Augmente légèrement la taille au survol */
 }
 
-.retour {
-    width: 400px;
+/* NIVEAUX DE DIFFICULTE */
+
+.cadreniveau {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgb(112, 35, 235);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    max-width: 40%; /* Limiter la largeur du cadre */
+    padding: 20px; /* Espacement intérieur pour que le texte ne touche pas les bords */
+    box-sizing: border-box; /* S'assurer que le padding fait partie de la largeur totale */
+    word-wrap: break-word; /* Gère les longues phrases sans débordement */
+    margin: auto; /* Centrer le cadre horizontalement */
+    flex-wrap: wrap; /* Permet de s'adapter à l'écran si nécessaire */
+    height: 180px;
     margin-top: 50px;
 }
+
+.containerniveau {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement les éléments */
+    align-items: center; /* Centre verticalement les éléments */
+    gap: 80px; /* Ajoute un espace fixe entre les boutons */
+    margin-top: 100px;
+}
+
+.titreniveau {
+    font-family: Montserrat;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    box-sizing: border-box; /* S'assurer que le padding fait partie de la largeur totale */
+    word-wrap: break-word; /* Gère les longues phrases sans débordement */
+    margin: auto; /* Centrer le cadre horizontalement */
+    flex-wrap: wrap; /* Permet de s'adapter à l'écran si nécessaire */
+}
+
+.niveau {
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
+    font-size: 50px;
+    font-family: Montserrat; 
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Coins arrondis */
+    transition: all 0.3s ease; /* Transition fluide */
+}
+
+.niveau:hover {
+    color: rgb(243, 243, 243);
+    background-color: rgb(58, 150, 74);
+    transform: scale(1.1); /* Augmente légèrement la taille au survol */
+}
+
+/* LES QUESTIONS */
 
 .question {
     text-align: center;
@@ -137,6 +191,8 @@ html {
     margin-top: 50px;
 }
 
+/* LES REPONSES */
+
 #successMessage,
 #feedbackMessage {
     display: flex;
@@ -147,14 +203,6 @@ html {
     color: white;
     font-size: 30px;
     padding: 50px;
-}
-
-.cadreréponse {
-    display: flex;
-    text-align: center;
-    border: 2px solid black;
-    background-color: rgb(112, 35, 235);
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); /* Ombre */
 }
 
 .image-format {
@@ -170,20 +218,24 @@ html {
     width: 300px;
 }
 
+/* LE SCORE FINAL */
+
 #scoreFinal {
     display: none; /* Par défaut, caché */
     display: flex;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 200px;
     font-family: montserrat;
+    font-weight: 700;
     color: white;
-    font-size: 30px;
+    font-size: 50px;
 }
 
 #retour {
     width: 330px;
     height: 100px;
     font-family: Montserrat;
+    font-weight: 700;
     font-size: 30px;
     background-color: rgb(183, 121, 212);
     border: 2px solid black;
@@ -197,6 +249,8 @@ html {
     cursor: pointer;
 }
 
+/* LE TIMER */
+
 .temps {
     display: flex;
     text-align: right;
@@ -207,6 +261,8 @@ html {
     font-size: 100px;
     padding: 50px;
 }
+
+/* LE COMPTEUR DE QUESTIONS */
 
 .nombrequestion {
     position: fixed;
@@ -229,7 +285,6 @@ html {
     flex-direction: column;
     gap: 30px; /* Distance entre les boutons */
     margin-top: 40px;
-
 }
 
 .row {
