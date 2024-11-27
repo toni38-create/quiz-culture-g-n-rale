@@ -1,38 +1,141 @@
 
 ///////////////////////////////// CHOIX DU SUJET /////////////////////////////////////////////
 
-// Choix du sujet lettres et philosophie
+/////////////// Choix du sujet lettres et philosophie ///////////////////////////
 document.getElementById('imageNietzsche').addEventListener('click', function() {
-    choisirQuiz('quiz1');
+    choixNiveaux();
+    document.getElementById('containerNiveauquiz1').style.display = 'flex';
 });
 
-// Choix du sujet sciences
+/////////////// Choix du sujet sciences /////////////////////////////////
 document.getElementById('imageEinstein').addEventListener('click', function() {
-    choisirQuiz('quiz2');
+    choixNiveaux();
+    document.getElementById('containerNiveauquiz2').style.display = 'flex';
 });
 
-// Choix du sujet histoire
+/////////////// Choix du sujet histoire ////////////////////////////
+
 document.getElementById('imageNapoleon').addEventListener('click', function() {
-    choisirQuiz('quiz3');
+    choixNiveaux();
+    document.getElementById('containerNiveauquiz3').style.display = 'flex';
 });
 
-// Fonction pour choisir le quiz
-function choisirQuiz(quizId) {
-    // Masquer les trois sujets de quiz 
-    document.getElementById('imageContainer').style.display = 'none';
+/////////////// Fonction choisir difficulté ///////////////////////////
 
-    // Affichage du compteur de questions
+function choixNiveaux() {
+    // Cache les trois sujets 
+    document.getElementById('imageContainer').style.display = 'none'; 
+     // Fait apparaitre le cadre "niveaux de difficulté" 
+    document.getElementById('cadreNiveau').style.display = 'flex';
+}
+
+////////////////////////// CHOIX DU NIVEAU DE DIFFICULTE ///////////////////////////////////////
+
+/////////////////// QUESTIONS LETTRES ET PHILOSOPHIE /////////////////////////////////////////
+
+document.getElementById('quiz1-easy' || 'quiz1').addEventListener('click', function() {
+    afficherQuestion('quiz1', 'easy', 0);
+    document.getElementById('containerNiveauquiz1').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+document.getElementById('quiz1-medium' || 'quiz1').addEventListener('click', function() {
+    afficherQuestion('quiz1', 'medium', 0);
+    document.getElementById('containerNiveauquiz1').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+document.getElementById('quiz1-difficult' || 'quiz1').addEventListener('click', function() {
+    afficherQuestion('quiz1', 'difficult', 0);
+    document.getElementById('containerNiveauquiz1').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+/////////////////////////// QUESTIONS SCIENCES /////////////////////////////////////////
+
+document.getElementById('quiz2-easy' || 'quiz2').addEventListener('click', function() {
+    afficherQuestion('quiz2', 'easy', 0);
+    document.getElementById('containerNiveauquiz2').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+document.getElementById('quiz2-medium' || 'quiz2').addEventListener('click', function() {
+    afficherQuestion('quiz2', 'medium', 0)
+    document.getElementById('containerNiveauquiz2').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+document.getElementById('quiz2-difficult' || 'quiz2').addEventListener('click', function() {
+    afficherQuestion('quiz2', 'difficult', 0)
+    document.getElementById('containerNiveauquiz2').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+/////////////////////////// QUESTIONS HISTOIRE  /////////////////////////////////////////
+
+document.getElementById('quiz3-easy' || 'quiz3').addEventListener('click', function() {
+    afficherQuestion('quiz3', 'easy', 0)
+    document.getElementById('containerNiveauquiz3').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';});
+
+document.getElementById('quiz3-medium' || 'quiz3').addEventListener('click', function() {
+    afficherQuestion('quiz3', 'medium', 0)
+    document.getElementById('containerNiveauquiz3').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';});
+
+document.getElementById('quiz3-difficult' || 'quiz3').addEventListener('click', function() {
+    afficherQuestion('quiz3', 'difficult', 0)
+    document.getElementById('containerNiveauquiz3').style.display = 'none';
+    document.getElementById('cadreNiveau').style.display = 'none';
+});
+
+//////////////// Fonction faire apparaitre la question ////////////////
+
+function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
+
+    clearInterval(intervalID);
+
     document.getElementById('questionNombre').style.display = 'block';
-    
-    // Affichage du quiz choisi
+
+    avancerQuestion(quizId, niveau, questionIndex);
+
     document.getElementById(quizId).style.display = 'block'; 
     currentQuiz = quizId; // Mettre à jour le quiz courant
     currentQuestionIndex = 0; // Réinitialiser l'index de la question
-    afficherQuestion(currentQuiz, currentQuestionIndex); // Afficher la première question
+
+    // Récupère l'objet question à partir de l'index de la question pour le quiz actuel
+    let questionObj = questions[quizId][niveau][questionIndex];
+    
+    let questionElement;
+    
+    if (quizId === 'quiz1') {
+        questionElement = document.getElementById('questionPhilo');
+    } 
+    else if (quizId === 'quiz2') {
+        questionElement = document.getElementById('questionSciences');
+    } 
+    else if (quizId === 'quiz3') {
+        questionElement = document.getElementById('questionHistoire');
+    }
+    
+    // Sélectionne tous les boutons associés à ce quiz pour les mettre à jour
+    const buttons = document.querySelectorAll(`#${quizId} .bouton`);
+    
+    questionElement.innerText = questionObj.question;
+    
+    // Démarre un timer pour cette question 
+    let timerID = startTimer(quizId, questionIndex);
+    
+    buttons.forEach((button, index) => {
+        button.innerText = questionObj.answers[index];
+        
+        button.onclick = function() {
+            verifierReponse(quizId, niveau, questionIndex, index, timerID);
+        };
+    });
 }
 
 let currentQuestionIndex = 0;
-let currentQuiz = "quiz1"; // Commence avec le premier quiz
 
 points = 0; // Réinitialiser les points au début du quiz
 
@@ -75,45 +178,14 @@ function startTimer(quizId, questionIndex) {
     return timerID;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function afficherQuestion(quizId, questionIndex, intervalID = null) {
-    avancerQuestion(quizId, questionIndex);
-    clearInterval(intervalID);  // Arrête le timer de la question précédente
-    let questionObj = questions[quizId][questionIndex];
-    
-    // Cibler les éléments spécifiques pour chaque quiz
-    let questionElement;
-    if (quizId === 'quiz1') {
-        questionElement = document.getElementById('questionPhilo');
-    } else if (quizId === 'quiz2') {
-        questionElement = document.getElementById('questionSciences');
-    } else if (quizId === 'quiz3') {
-        questionElement = document.getElementById('questionHistoire');
-    }
-    
-    const buttons = document.querySelectorAll(`#${quizId} .bouton`);
-    
-    // Mettre à jour le texte de la question
-    questionElement.innerText = questionObj.question;
-    let timerID = startTimer(quizId, questionIndex); 
-    // Mettre à jour les textes des boutons
-    buttons.forEach((button, index) => {
-        button.innerText = questionObj.answers[index];
-        button.onclick = function() {
-            verifierReponse(quizId, questionIndex, index, timerID);
-        };
-    });
-}
+///////////////////////////////////////// GESTION DES GIFS SUCCES ET ERREURS /////////////////////////////////////////////////////////
 
 // Variable pour le score 
 let score = 0;
 
-///////////////////////////////////////// GESTION DES GIFS SUCCES ET ERREURS /////////////////////////////////////////////////////////
-
     // Fonction pour placer le message de succès
-function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
-    const correctAnswer = questions[quizId][questionIndex].correct;
+function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = null) {
+    const correctAnswer = questions[quizId][niveau][questionIndex].correct;
     const successMessageElement = document.getElementById('successMessage'); 
     const feedbackElement = document.getElementById('feedbackMessage');
     
@@ -123,20 +195,21 @@ function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
     if (answerIndex === correctAnswer) {
         // Afficher le message de succès
         score++;
+        console.log(score);
         successMessageElement.innerText = "Bonne réponse !"; 
         successMessageElement.style.display = 'block'; 
 
         
         if (quizId === 'quiz1') {
-            document.getElementById('bonneRéponsequiz1').style.display = 'block'; // Affiche l'image succès pour quiz 1
+            document.getElementById('bonneRéponseQuiz1').style.display = 'block'; // Affiche l'image succès pour quiz 1
             document.getElementById('timer').style.display = 'none'; 
 
         } else if (quizId === 'quiz2') {
-            document.getElementById('bonneRéponsequiz2').style.display = 'block'; // Affiche l'image succès pour quiz 2
+            document.getElementById('bonneRéponseQuiz2').style.display = 'block'; // Affiche l'image succès pour quiz 2
             document.getElementById('timer').style.display = 'none'; 
 
         } else if (quizId === 'quiz3') {
-            document.getElementById('bonneRéponsequiz3').style.display = 'block'; // Affiche l'image succès pour quiz 3
+            document.getElementById('bonneRéponseQuiz3').style.display = 'block'; // Affiche l'image succès pour quiz 3
             document.getElementById('timer').style.display = 'none'; 
 
         }
@@ -146,15 +219,15 @@ function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
             successMessageElement.style.display = 'none';
             // Disparition des images 
             if (quizId === 'quiz1') {
-                document.getElementById('bonneRéponsequiz1').style.display = 'none'; // Disparition de l'image pour quiz 1
+                document.getElementById('bonneRéponseQuiz1').style.display = 'none'; // Disparition de l'image pour quiz 1
             } else if (quizId === 'quiz2') {
-                document.getElementById('bonneRéponsequiz2').style.display = 'none'; // Disparition de l'image pour quiz 2
+                document.getElementById('bonneRéponseQuiz2').style.display = 'none'; // Disparition de l'image pour quiz 2
             } else if (quizId === 'quiz3') {
-                document.getElementById('bonneRéponsequiz3').style.display = 'none'; // Disparition de l'image pour quiz 3
+                document.getElementById('bonneRéponseQuiz3').style.display = 'none'; // Disparition de l'image pour quiz 3
             }
             
-        if (questionIndex + 1 < questions[quizId].length) {
-            afficherQuestion(quizId, questionIndex + 1 ,timerID);
+        if (questionIndex + 1 < questions[quizId][niveau].length) {
+            afficherQuestion(quizId, niveau, questionIndex + 1 ,timerID);
             document.getElementById(quizId).style.display = 'block'; // Réaffiche le quiz pour la question suivante
             } else {
                 // Si le quiz est terminé
@@ -168,7 +241,7 @@ function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
     }, 1000); // Délai de 2 secondes 40 avant de passer à la suite 
         } else {
         // Afficher le message d'erreur
-        const bonneReponse = questions[quizId][questionIndex].answers[correctAnswer];
+        const bonneReponse = questions[quizId][niveau][questionIndex].answers[correctAnswer];
         feedbackElement.innerText = `Mauvaise réponse ! 
         
         La bonne réponse était : ${bonneReponse}`;
@@ -176,15 +249,15 @@ function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
         
         // Affichage des images pour les mauvaises réponses
         if (quizId === 'quiz1') {
-            document.getElementById('mauvaiseRéponsequiz1').style.display = 'block'; // Affiche l'image pour quiz 1
+            document.getElementById('mauvaiseRéponseQuiz1').style.display = 'block'; // Affiche l'image pour quiz 1
             document.getElementById('timer').style.display = 'none'; 
 
         } else if (quizId === 'quiz2') {
-            document.getElementById('mauvaiseRéponsequiz2').style.display = 'block'; // Affiche l'image pour quiz 2
+            document.getElementById('mauvaiseRéponseQuiz2').style.display = 'block'; // Affiche l'image pour quiz 2
             document.getElementById('timer').style.display = 'none'; 
 
         } else if (quizId === 'quiz3') {
-            document.getElementById('mauvaiseRéponsequiz3').style.display = 'block'; // Affiche l'image pour quiz 3
+            document.getElementById('mauvaiseRéponseQuiz3').style.display = 'block'; // Affiche l'image pour quiz 3
             document.getElementById('timer').style.display = 'none'; 
 
         }
@@ -196,17 +269,17 @@ function verifierReponse(quizId, questionIndex, answerIndex, timerID = null) {
             
             // Disparition  des images pour les mauvaises réponses
             if (quizId === 'quiz1') {
-                document.getElementById('mauvaiseRéponsequiz1').style.display = 'none'; // Affiche l'image pour quiz 1
+                document.getElementById('mauvaiseRéponseQuiz1').style.display = 'none'; // Affiche l'image pour quiz 1
             } else if (quizId === 'quiz2') {
-                document.getElementById('mauvaiseRéponsequiz2').style.display = 'none'; // Affiche l'image pour quiz 2
+                document.getElementById('mauvaiseRéponseQuiz2').style.display = 'none'; // Affiche l'image pour quiz 2
             } else if (quizId === 'quiz3') {
-                document.getElementById('mauvaiseRéponsequiz3').style.display = 'none'; // Affiche l'image pour quiz 3
+                document.getElementById('mauvaiseRéponseQuiz3').style.display = 'none'; // Affiche l'image pour quiz 3
             }
             
             
-            if (questionIndex + 1 < questions[quizId].length) {
+            if (questionIndex + 1 < questions[quizId][niveau].length) {
                 questionIndex++;
-                afficherQuestion(quizId, questionIndex,timerID);
+                afficherQuestion(quizId, niveau, questionIndex,timerID);
                 document.getElementById(quizId).style.display = 'block'; // Réaffiche le quiz pour la question suivante
             } else {
                 // Si le quiz est terminé
@@ -235,13 +308,14 @@ document.getElementById('retourAccueil').addEventListener('click', function() {
 
 /////////////////////////////////////////// COMPTEUR DE QUESTIONS ///////////////////////////////////////////////////////////
 
-function avancerQuestion(quizId, questionIndex) {
-    if (questionIndex + 1 <= questions[quizId].length) 
-    {
-        let questionLength = questions[quizId].length;
-        updateQuestionCounter(questionIndex + 1, questionLength); // Mettre à jour le compteur
+function avancerQuestion(quizId, niveau, questionIndex) {
+    const questionsNiveau = questions[quizId][niveau]; // Récupère les questions du niveau
+    if (questionIndex + 1 <= questionsNiveau.length) { 
+        let questionLength = questionsNiveau.length; // Longueur totale des questions du niveau
+        updateQuestionCounter(questionIndex + 1, questionLength); // Met à jour le compteur des questions
     } else {
-        console.log("Fin du quiz.");
+        console.log("Fin du quiz pour ce niveau.");
+        // Logique à ajouter si nécessaire, par exemple pour afficher un message de fin de niveau ou de quiz
     }
 }
 
