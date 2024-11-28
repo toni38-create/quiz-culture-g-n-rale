@@ -146,7 +146,6 @@ points = 0; // Réinitialiser les points au début du quiz
 // ID du quiz et index de la question
 let questionIndex = 0; 
 
-let niveau = "easy";
 
 // Fonction pour démarrer le timer
 function startTimer(quizId, questionIndex) {
