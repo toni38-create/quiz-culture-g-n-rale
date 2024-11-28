@@ -25,28 +25,32 @@ document.getElementById('imageNapoleon').addEventListener('click', function() {
 function choixNiveaux() {
     // Cache les trois sujets 
     document.getElementById('imageContainer').style.display = 'none'; 
-     // Fait apparaitre le cadre "niveaux de difficulté" 
+    // Fait apparaitre le cadre "niveaux de difficulté" 
     document.getElementById('cadreNiveau').style.display = 'flex';
 }
 
 ////////////////////////// CHOIX DU NIVEAU DE DIFFICULTE ///////////////////////////////////////
 
+
 /////////////////// QUESTIONS LETTRES ET PHILOSOPHIE /////////////////////////////////////////
 
 document.getElementById('quiz1-easy' || 'quiz1').addEventListener('click', function() {
     afficherQuestion('quiz1', 'easy', 0);
+    niveau = 'easy';
     document.getElementById('containerNiveauquiz1').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
 
 document.getElementById('quiz1-medium' || 'quiz1').addEventListener('click', function() {
     afficherQuestion('quiz1', 'medium', 0);
+    niveau = 'medium';
     document.getElementById('containerNiveauquiz1').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
 
 document.getElementById('quiz1-difficult' || 'quiz1').addEventListener('click', function() {
     afficherQuestion('quiz1', 'difficult', 0);
+    niveau = 'difficult';
     document.getElementById('containerNiveauquiz1').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
@@ -55,18 +59,21 @@ document.getElementById('quiz1-difficult' || 'quiz1').addEventListener('click', 
 
 document.getElementById('quiz2-easy' || 'quiz2').addEventListener('click', function() {
     afficherQuestion('quiz2', 'easy', 0);
+    niveau = 'easy';
     document.getElementById('containerNiveauquiz2').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
 
 document.getElementById('quiz2-medium' || 'quiz2').addEventListener('click', function() {
-    afficherQuestion('quiz2', 'medium', 0)
+    afficherQuestion('quiz2', 'medium', 0);
+    niveau = 'medium';
     document.getElementById('containerNiveauquiz2').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
 
 document.getElementById('quiz2-difficult' || 'quiz2').addEventListener('click', function() {
-    afficherQuestion('quiz2', 'difficult', 0)
+    afficherQuestion('quiz2', 'difficult', 0);
+    niveau = 'difficult';
     document.getElementById('containerNiveauquiz2').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
@@ -74,17 +81,20 @@ document.getElementById('quiz2-difficult' || 'quiz2').addEventListener('click', 
 /////////////////////////// QUESTIONS HISTOIRE  /////////////////////////////////////////
 
 document.getElementById('quiz3-easy' || 'quiz3').addEventListener('click', function() {
-    afficherQuestion('quiz3', 'easy', 0)
+    afficherQuestion('quiz3', 'easy', 0);
+    niveau = 'easy';
     document.getElementById('containerNiveauquiz3').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';});
 
 document.getElementById('quiz3-medium' || 'quiz3').addEventListener('click', function() {
-    afficherQuestion('quiz3', 'medium', 0)
+    afficherQuestion('quiz3', 'medium', 0);
+    niveau = 'medium';
     document.getElementById('containerNiveauquiz3').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';});
 
 document.getElementById('quiz3-difficult' || 'quiz3').addEventListener('click', function() {
-    afficherQuestion('quiz3', 'difficult', 0)
+    afficherQuestion('quiz3', 'difficult', 0);
+    niveau = 'difficult';
     document.getElementById('containerNiveauquiz3').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
 });
@@ -141,11 +151,12 @@ let currentQuestionIndex = 0;
 
 points = 0; // Réinitialiser les points au début du quiz
 
-////////////////////////////////////////// TIMER ///////////////////////////////////////////////////
+////////////////////////////////////////////////////// TIMER /////////////////////////////////////////////////////////////////
 
 // ID du quiz et index de la question
 let questionIndex = 0; 
 
+let niveau = ''; 
 
 // Fonction pour démarrer le timer
 function startTimer(quizId, questionIndex) {
@@ -188,6 +199,7 @@ function startTimer(quizId, questionIndex) {
 
 // Variable pour le score 
 let score = 0;
+
 
     // Fonction pour placer le message de succès
 function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = null) {
