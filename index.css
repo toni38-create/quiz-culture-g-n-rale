@@ -5,7 +5,7 @@ html {
 
 .body {
     background-color: rgb(107, 107, 252);
-    margin: 0; /* Supprime la marge par défaut */
+    margin: 0; 
 }
 
 .bloc {
@@ -13,55 +13,55 @@ html {
     height: 150px;
     color: rgb(41, 41, 41);
     background-color: rgb(243, 243, 243);
-    border-radius: 12px; /* Coins arrondis */
+    border-radius: 12px; 
     justify-content: center;
     align-items: center;
-    margin: auto; /* Centre le bloc horizontalement */
+    margin: auto; 
     margin-top: 40px;
-    display: flex; /* Définit le bloc comme un conteneur flex */
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    display: flex; 
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
     cursor: pointer;
 }
 
 .titre {
-    font-family: Montserrat, sans-serif; /* Ajout de sans-serif comme police de secours */
+    font-family: Montserrat, sans-serif; 
     font-size: 3rem;
     color: rgb(41, 41, 41);
-    margin: auto; /* Centre le titre à l'intérieur du bloc */
+    margin: auto; 
     text-align: center;
 }
 
 .image-container {
-    display: flex;               /* Utiliser Flexbox pour aligner les éléments horizontalement */
-    justify-content: space-around; /* Distribue l'espace entre les éléments */
-    padding: 20px;              /* Ajoute un peu d'espace autour des images */
-    overflow: hidden;           /* Cache tout débordement */
+    display: flex;               
+    justify-content: space-around; 
+    padding: 20px;              
+    overflow: hidden;          
 }
 
 .image-item {
-    flex: 1;                    /* Chaque image prend une part égale de l'espace disponible */
-    margin: 0 10px;            /* Marge entre les images */
-    text-align: center;         /* Centrer le texte des légendes sous les images */
+    flex: 1;                    
+    margin: 0 10px;            
+    text-align: center;         
 }
 
 .image-format1 {
     width: 80%;
-    height: auto; /* Conserve le rapport d'aspect */
+    height: auto; 
     cursor: pointer;
     margin-top: 20px;
 }
 
 .image-format1:hover {
-    transform: scale(0.9); /* Augmente la taille de l'image de 10% lors du survol */
-    transition: transform 0.3s ease; /* Transition douce pour le changement de taille */
+    transform: scale(0.9); 
+    transition: transform 0.3s ease; 
 }
 
 .legende-container {
-    display: flex; /* Utilise Flexbox pour disposer les images horizontalement */
-    justify-content: center; /* Espace les images avec des marges égales */
-    align-items: center; /* Centre verticalement les éléments (images et légendes) */
-    width: 100%; /* Prend toute la largeur disponible */
-    margin: 0.5px auto; /* Centrer le conteneur avec un espacement vertical */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin: 0.5px auto;
 }
 
 .legende {
@@ -72,36 +72,15 @@ html {
     margin-top: 20px;
     background-color: rgb(243, 243, 243);
     cursor: pointer;
-    border-radius: 12px; /* Coins arrondis */
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
+    border-radius: 12px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); 
 }
 
 .hide {
-    display: none; /* Masquer le quiz par défaut */
+    display: none; 
     text-align: center;
 }
-/* BOUTONS DES REPONSES */
-.bouton {
-    display: inline-block;
-    color: rgb(41, 41, 41);
-    background-color: rgb(243, 243, 243);
-    font-size: 25px;
-    font-family: Montserrat; 
-    font-weight: 700;
-    border-radius: 12px; /* Coins arrondis */
-    cursor: pointer;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Ombre autour du bouton */
-    padding: 20px;
-    width: auto;
-    max-width: 100%;
-    height: auto; /* Permet au contenu de s'adapter */
-}   
 
-.bouton:hover {
-    color: rgb(243, 243, 243);
-    background-color: rgb(58, 150, 74);
-    transform: scale(1.1); /* Augmente légèrement la taille au survol */
-}
 
 /* NIVEAUX DE DIFFICULTE */
 
@@ -110,22 +89,22 @@ html {
     text-align: center;
     border: 2px solid black;
     background-color: rgb(112, 35, 235);
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); /* Ombre */
-    max-width: 40%; /* Limiter la largeur du cadre */
-    padding: 20px; /* Espacement intérieur pour que le texte ne touche pas les bords */
-    box-sizing: border-box; /* S'assurer que le padding fait partie de la largeur totale */
-    word-wrap: break-word; /* Gère les longues phrases sans débordement */
-    margin: auto; /* Centrer le cadre horizontalement */
-    flex-wrap: wrap; /* Permet de s'adapter à l'écran si nécessaire */
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
+    max-width: 40%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
     height: 180px;
     margin-top: 50px;
 }
 
 .containerniveau {
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre horizontalement les éléments */
-    align-items: center; /* Centre verticalement les éléments */
-    gap: 80px; /* Ajoute un espace fixe entre les boutons */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 80px; 
     margin-top: 100px;
 }
 
@@ -134,10 +113,10 @@ html {
     font-weight: 700;
     color: rgb(255, 255, 255);
     font-size: 40px;
-    box-sizing: border-box; /* S'assurer que le padding fait partie de la largeur totale */
-    word-wrap: break-word; /* Gère les longues phrases sans débordement */
-    margin: auto; /* Centrer le cadre horizontalement */
-    flex-wrap: wrap; /* Permet de s'adapter à l'écran si nécessaire */
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
 }
 
 .niveau {
@@ -152,14 +131,14 @@ html {
     width: auto;
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Coins arrondis */
-    transition: all 0.3s ease; /* Transition fluide */
+    border-radius: 8px; 
+    transition: all 0.3s ease; /
 }
 
 .niveau:hover {
     color: rgb(243, 243, 243);
     background-color: rgb(58, 150, 74);
-    transform: scale(1.1); /* Augmente légèrement la taille au survol */
+    transform: scale(1.1); 
 }
 
 /* LES QUESTIONS */
@@ -169,10 +148,10 @@ html {
     font-family: Montserrat;
     color: rgb(255, 255, 255);
     font-size: 30px;
-    padding: 20px; /* Réduire le padding pour optimiser l'espace */
-    box-sizing: border-box; /* Inclure le padding dans la largeur totale */
-    word-wrap: break-word; /* Permet de couper les mots longs et éviter qu'ils dépassent */
-    margin: auto; /* Centrer le cadre horizontalement */
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
 }
 
 .cadrequestion {
@@ -180,18 +159,41 @@ html {
     text-align: center;
     border: 2px solid black;
     background-color: rgb(112, 35, 235);
-    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); /* Ombre */
-    max-width: 90%; /* Limiter la largeur du cadre */
-    padding: 20px; /* Espacement intérieur pour que le texte ne touche pas les bords */
-    box-sizing: border-box; /* S'assurer que le padding fait partie de la largeur totale */
-    word-wrap: break-word; /* Gère les longues phrases sans débordement */
-    margin: auto; /* Centrer le cadre horizontalement */
-    flex-wrap: wrap; /* Permet de s'adapter à l'écran si nécessaire */
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5); 
+    max-width: 90%; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    margin: auto; 
+    flex-wrap: wrap; 
     height: 180px;
     margin-top: 50px;
 }
 
-/* LES REPONSES */
+/* BOUTONS DES REPONSES */
+.bouton {
+    display: inline-block;
+    color: rgb(41, 41, 41);
+    background-color: rgb(243, 243, 243);
+    font-size: 25px;
+    font-family: Montserrat; 
+    font-weight: 700;
+    border-radius: 12px; 
+    cursor: pointer;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    width: auto;
+    max-width: 100%;
+    height: auto; 
+}   
+
+.bouton:hover {
+    color: rgb(243, 243, 243);
+    background-color: rgb(58, 150, 74);
+    transform: scale(1.1); 
+}
+
+/* LES GIFS */
 
 #successMessage,
 #feedbackMessage {
@@ -221,17 +223,19 @@ html {
 /* LE SCORE FINAL */
 
 #scoreFinal {
-    display: none; /* Par défaut, caché */
+    display: none; 
     display: flex;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 100px;
     font-family: montserrat;
     font-weight: 700;
     color: white;
     font-size: 50px;
 }
 
-#retour {
+/* BOUTON RETOUR A L ACCUEIL */
+
+#retourAccueil {
     width: 330px;
     height: 100px;
     font-family: Montserrat;
@@ -242,11 +246,43 @@ html {
     justify-content: center;
     color: white;
     align-items: center;
-    margin: auto; /* Centre le bloc horizontalement */
+    margin: auto; 
     margin-top: 40px;
-    display: flex; /* Définit le bloc comme un conteneur flex */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Ombre */
+    display: flex; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
     cursor: pointer;
+}
+
+#retourAccueil:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+
+/* BOUTON REJOUER */
+
+#boutonRejouer {
+    width: 330px;
+    height: 100px;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 30px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 50%;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    margin: auto; 
+    margin-top: 30px;
+    display: flex; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+    cursor: pointer;
+}
+
+#boutonRejouer:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
 }
 
 /* LE TIMER */
@@ -266,7 +302,7 @@ html {
 
 .nombrequestion {
     position: fixed;
-    bottom: 10px;             /* Espace entre le texte et le bas de l'écran */
+    bottom: 10px;             
     right: 20px;    
     font-family: Montserrat;
     color: white;
@@ -276,21 +312,21 @@ html {
 .colonne1 {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Distance entre les boutons */
+    gap: 30px; 
     margin-top: 40px;
 }
 
 .colonne2 {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Distance entre les boutons */
+    gap: 30px; 
     margin-top: 40px;
 }
 
 .row {
     display: flex;
-    justify-content: center; /* Place les colonnes avec un espace égal */
+    justify-content: center; 
     width: 100%;
-    margin: 0 auto; /* Centre horizontalement */
-    gap: 50px; /* Ajuste l'écart horizontal entre les colonnes */
+    margin: 0 auto; 
+    gap: 50px; 
 }
