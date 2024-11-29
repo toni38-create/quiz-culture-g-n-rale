@@ -4,26 +4,26 @@ const questions = {
                 {
                     question: "Qui est l'auteur de 'Les Misérables' ?",
                     answers: ["Victor Hugo", "Émile Zola", "Marcel Proust", "Albert Camus"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Quel philosophe est l'auteur de 'Le Discours de la Méthode' ?",
-                    answers: ["René Descartes", "Jean-Paul Sartre", "Friedrich Nietzsche", "Aristote"],
+                    answers: ["Jean-Paul Sartre", "René Descartes", "Friedrich Nietzsche", "Aristote"],
                     correct: 1,
                 },
                 {
                     question: "Dans quelle œuvre de Shakespeare trouve-t-on les personnages de Hamlet et Ofélie ?",
                     answers: ["Roméo et Juliette", "Macbeth", "Hamlet", "Le Roi Lear"],
-                    correct: 0,
+                    correct: 2,
                 },
                 {
                     question: "Qui a écrit 'L'Étranger' ?",
                     answers: ["Albert Camus", "Simone de Beauvoir", "Jean-Paul Sartre", "André Gide"],
-                    correct: 2,
+                    correct: 0,
                 },
                 {
                     question: "Quel philosophe a écrit 'La République' ?",
-                    answers: ["Platon", "Socrate", "Aristote", "Jean-Jacques Rousseau"],
+                    answers: ["Jean-Jacques Rousseau", "Socrate", "Aristote", "Platon"],
                     correct: 3,
                 },
                 {
@@ -34,22 +34,22 @@ const questions = {
                 {
                     question: "Dans quelle œuvre de Victor Hugo trouve-t-on le personnage de Quasimodo ?",
                     answers: ["Les Misérables", "Notre-Dame de Paris", "L'Homme qui rit", "Le Dernier Jour d'un Condamné"],
-                    correct: 3,
+                    correct: 1,
                 },
                 {
                     question: "Qui a écrit 'L'Imaginaire' ?",
                     answers: ["René Descartes", "Jean-Paul Sartre", "Jean de La Fontaine", "Molière"],
-                    correct: 0,
+                    correct: 3,
                 },
                 {
                     question: "Quel est le nom du livre de Jean-Paul Sartre sur la liberté et la mauvaise foi ?",
                     answers: ["L'Être et le Néant", "Les Mots", "La Nausée", "Le Deuxième Sexe"],
-                    correct: 2,
+                    correct: 0,
                 },
                 {
                     question: "Qui a écrit 'Candide' ?",
                     answers: ["Voltaire", "Jean-Jacques Rousseau", "Montesquieu", "Diderot"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Quel est le philosophe célèbre pour sa théorie de l'évolution ?",
@@ -59,84 +59,85 @@ const questions = {
                 {
                     question: "Qui est l'auteur du 'Contrat Social' ?",
                     answers: ["Jean-Jacques Rousseau", "Voltaire", "Baruch Spinoza", "John Locke"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Dans quelle œuvre de Gustave Flaubert trouve-t-on le personnage de Madame Bovary ?",
                     answers: ["L'Éducation sentimentale", "Bouvard et Pécuchet", "Madame Bovary", "Salammbô"],
-                    correct: 3,
+                    correct: 2,
                 },
                 {
                     question: "Quel philosophe est l'auteur de 'Critique de la raison pure' ?",
                     answers: ["Emmanuel Kant", "Georg Wilhelm Friedrich Hegel", "Friedrich Nietzsche", "Arthur Schopenhauer"],
-                    correct: 1,
+                    correct: 0,
                 },
                 {
                     question: "Quel écrivain a écrit 'Les Fleurs du mal' ?",
                     answers: ["Paul Verlaine", "Arthur Rimbaud", "Charles Baudelaire", "Alfred de Musset"],
-                    correct: 1,
+                    correct: 2,
                 }
             ],
             medium: [
                     {
                         question: "Quel philosophe a écrit 'L'Être et le Néant' ?",
                         answers: ["Sartre", "Kant", "Hegel", "Spinoza"],
-                        correct: 1,
+                        correct: 0,
                     },
                     {
                         question: "Dans quelle œuvre de René Descartes se trouve le célèbre 'Je pense, donc je suis' ?",
                         answers: ["Méditations Métaphysiques", "Le Discours de la Méthode", "Les Passions de l'âme", "Les Principes de la Philosophie"],
-                        correct: 2,
+                        correct: 1,
                     },
                     {
                         question: "Dans quel livre Nietzsche affirme-t-il 'Dieu est mort' ?",
                         answers: ["Ainsi parlait Zarathoustra", "Le Gai Savoir", "Par-delà bien et mal", "La Volonté de puissance"],
-                        correct: 3,
+                        correct: 1,
                     },
                     {
                         question: "Quel philosophe a développé la théorie du surhomme ?",
                         answers: ["Friedrich Nietzsche", "Jean-Paul Sartre", "Georg Wilhelm Friedrich Hegel", "Martin Heidegger"],
-                        correct: 2,
+                        correct: 0,
                     },
                     {
                         question: "Dans quelle œuvre Kant traite-t-il de l'éthique et de la morale ?",
                         answers: ["Critique de la raison pure", "Critique de la raison pratique", "La Métaphysique des mœurs", "Fondements de la métaphysique des mœurs"],
-                        correct: 3,
+                        correct: 2,
                     },
                     {
                         question: "Qui a écrit 'Le Prince' ?",
-                        answers: ["Machiavel", "Thomas Hobbes", "Jean-Jacques Rousseau", "Baruch Spinoza"],
-                        correct: 1,
+                        answers: ["Spinoza", "Thomas Hobbes", "Jean-Jacques Rousseau", "Machiavel"],
+                        correct: 3,
                     },
                     {
                         question: "Quel écrivain est l'auteur de 'Les Confessions' ?",
-                        answers: ["Jean-Jacques Rousseau", "Jean-Paul Sartre", "Stendhal", "Honoré de Balzac"],
-                        correct: 3,
+                        answers: ["Stendhal", "Jean-Paul Sartre", "Jean-Jacques Rousseau", "Honoré de Balzac"],
+                        correct: 2,
                     },
                     {
                         question: "Quel philosophe est connu pour sa théorie de l'idéalisme absolu ?",
                         answers: ["Georg Wilhelm Friedrich Hegel", "Friedrich Nietzsche", "Arthur Schopenhauer", "Immanuel Kant"],
-                        correct: 2,
-                    },
-                    {
-                        question: "Quel écrivain a écrit 'L'Avare' ?",
-                        answers: ["Molière", "Racine", "Corneille", "Voltaire"],
-                        correct: 1,
-                    },
-                    {
-                        question: "Dans quelle œuvre de Sartre trouve-t-on le concept de 'mauvaise foi' ?",
-                        answers: ["L'Être et le Néant", "Les Mots", "La Nausée", "Les Mains sales"],
-                        correct: 2,
-                    },
-                    {
-                        question: "Quel philosophe a écrit 'Le Manifeste du Parti Communiste' ?",
-                        answers: ["Karl Marx", "Friedrich Engels", "Jean-Paul Sartre", "Michel Foucault"],
                         correct: 0,
                     },
                     {
-                        question: "Dans quelle œuvre de Rousseau trouve-t-on la célèbre phrase 'L'homme est né libre, et partout il est dans les fers' ?",
-                        answers: ["Le Contrat Social", "Discours sur l'origine et les fondements de l'inégalité parmi les hommes", "Émile", "Le Discours sur les sciences et les arts"],
+                        question: "Quel écrivain a écrit 'L'Avare' ?",
+                        answers: ["Voltaire", "Racine", "Corneille", "Molière"],
                         correct: 3,
+                    },
+                    {
+                        question: "Quel philosophe a écrit 'Critique de la raison pratique' ?",
+                        answers: ["René Descartes", "Emmanuel Kant", "Friedrich Nietzsche", "Arthur Schopenhauer"],
+                        correct: 1,
+
+                    },
+                    {
+                        question: "Quel philosophe a écrit 'Le Manifeste du Parti Communiste' ?",
+                        answers: ["Jean-Paul Sartre", "Louis Althusser", "Karl Marx", "Michel Foucault"],
+                        correct: 2,
+                    },
+                    {
+                        question: "Dans quelle œuvre de Rousseau trouve-t-on la célèbre phrase 'L'homme est né libre, et partout il est dans les fers' ?",
+                        answers: ["Emile", "Discours sur l'origine et les fondements de l'inégalité parmi les hommes", "Le Contrat Social", "Le Discours sur les sciences et les arts"],
+                        correct: 2,
                     },
                     {
                         question: "Quel est le principal ouvrage de John Locke sur les droits naturels ?",
@@ -145,90 +146,90 @@ const questions = {
                     },
                     {
                         question: "Dans quelle œuvre Foucault parle-t-il du pouvoir et de la surveillance ?",
-                        answers: ["Surveiller et Punir", "Histoire de la folie", "Les Mots et les Choses", "La Volonté de savoir"],
+                        answers: ["Histoire de la sexualité", "Histoire de la folie", "Les Mots et les Choses", "Surveiller et Punir"],
                         correct: 3,
                     },
                     {
                         question: "Quel philosophe est l'auteur de 'La Nausée' ?",
-                        answers: ["Jean-Paul Sartre", "Simone de Beauvoir", "Maurice Merleau-Ponty", "Albert Camus"],
-                        correct: 1,
+                        answers: ["Merleau-Ponty", "Simone de Beauvoir", "Jean-Paul Sartre", "Albert Camus"],
+                        correct: 2,
                     },
                 ],
                 difficult: [
                     {
-                        question: "Dans quel ouvrage Descartes introduit-il le doute méthodique ?",
-                        answers: ["Les Méditations Métaphysiques", "Le Discours de la Méthode", "La Recherche de la vérité", "Principes de la philosophie"],
-                        correct: 1,
+                        question: "Dans quel roman de James Joyce utilise-t-on abondamment la technique du 'stream of consciousness' (courant de conscience) ?",
+                        answers: ["Les gens de Dublin", "Finnegans Wake", "Portrait de l'artiste en jeune homme", "Ulysse"],
+                        correct: 3,
                     },
                     {
                         question: "Quel est le principe fondamental de la phénoménologie de Husserl ?",
                         answers: ["La réduction phénoménologique", "L'intuition pure", "L'extériorité", "Le Dasein"],
-                        correct: 3,
+                        correct: 0,
                     },
                     {
-                        question: "Dans quelle œuvre Nietzsche critique-t-il la morale chrétienne ?",
-                        answers: ["La Généalogie de la morale", "Le Crépuscule des idoles", "Par-delà bien et mal", "Ainsi parlait Zarathoustra"],
-                        correct: 2,
+                        question: "Dans 'Les Misérables' de Victor Hugo, quel personnage devient un héros en sauvant des gens pendant l'émeute de Paris en 1832 ?",
+                        answers: ["Enjolras", "Gavroche", "Marius Pontmercy", "Jean Valjean"],
+                        correct: 3,
                     },
                     {
                         question: "Dans quelle œuvre Hegel développe-t-il sa dialectique de l'histoire ?",
                         answers: ["Phénoménologie de l'Esprit", "Science de la logique", "Principes de la philosophie du droit", "Leçons sur la philosophie de l'histoire"],
-                        correct: 1,
+                        correct: 3,
                     },
                     {
                         question: "Quel philosophe a écrit 'La Science de la logique' ?",
                         answers: ["Georg Wilhelm Friedrich Hegel", "Martin Heidegger", "Friedrich Nietzsche", "Karl Marx"],
-                        correct: 3,
+                        correct: 0,
                     },
                     {
-                        question: "Dans quelle œuvre Sartre parle-t-il de l'angoisse existentielle ?",
-                        answers: ["L'Être et le Néant", "Les Mots", "La Nausée", "La Critique de la raison dialectique"],
+                        question: "Dans quel roman de Marguerite Yourcenar retrouve-t-on les pensées fictives de l'empereur Hadrien ?",
+                        answers: ["L'oeuvre au noir", "Mémoires d'Hadrien", "Alexis ou le Traité du vain combat", "Denier du rêve"],
                         correct: 1,
                     },
                     {
-                        question: "Dans quelle œuvre Marx analyse-t-il la structure économique de la société ?",
-                        answers: ["Le Capital", "Le Manifeste du Parti Communiste", "La Guerre civile en France", "Critique de l'économie politique"],
-                        correct: 2,
+                        question: "Dans 'Être et Temps' de Heidegger, quel concept décrit la condition humaine face à sa finitude ?",
+                        answers: ["L'angoisse", "Le Dasein", "La temporalité", "L'être-pour-la-mort"],
+                        correct: 3,
                     },
                     {
                         question: "Quel est le philosophe de l'Existentialisme ?",
                         answers: ["Sartre", "Hegel", "Kant", "Nietzsche"],
-                        correct: 3,
+                        correct: 0,
                     },
                     {
-                        question: "Qui est l'auteur du concept de 'volonté de puissance' ?",
-                        answers: ["Nietzsche", "Kant", "Hegel", "Schopenhauer"],
+                        question: "Quel philosophe a formulé l'argument ontologique dans une version influente du 11ème siècle ?",
+                        answers: ["Thomas d'Aquin", "Anselme de Cantorbéry", "René Descartes", "Gottfried Leibniz"],
                         correct: 1,
                     },
                     {
                         question: "Dans quelle œuvre de Marx est abordée la notion de 'l'aliénation' ?",
                         answers: ["Le Capital", "Manuscrits économiques et philosophiques", "Le Manifeste du Parti Communiste", "La Guerre civile en France"],
-                        correct: 3,
+                        correct: 0,
                     },
                     {
                         question: "Quel philosophe est l'auteur de 'La Vie de Jésus' ?",
-                        answers: ["Renan", "Diderot", "Rousseau", "Voltaire"],
+                        answers: ["Rousseau", "Diderot", "Renan", "Voltaire"],
                         correct: 2,
                     },
                     {
                         question: "Qui a écrit 'Le mythe de Sisyphe' ?",
-                        answers: ["Albert Camus", "Jean-Paul Sartre", "Simone de Beauvoir", "Maurice Merleau-Ponty"],
-                        correct: 3,
+                        answers: ["Socrate", "Albert Camus", "Simone de Beauvoir", "Maurice Merleau-Ponty"],
+                        correct: 1,
                     },
                     {
                         question: "Quel philosophe a écrit 'De l'esprit des lois' ?",
                         answers: ["Montesquieu", "Rousseau", "Voltaire", "Diderot"],
-                        correct: 1,
+                        correct: 0,
                     },
                     {
                         question: "Quel philosophe a développé la théorie du 'pouvoir-savoir' ?",
-                        answers: ["Michel Foucault", "Jean-Paul Sartre", "Karl Marx", "Sigmund Freud"],
-                        correct: 2,
+                        answers: ["Sigmund Freud", "Jean-Paul Sartre", "Karl Marx", "Michel Foucault"],
+                        correct: 3,
                     },
                     {
                         question: "Dans quel ouvrage Foucault analyse-t-il le lien entre pouvoir et institution ?",
-                        answers: ["Surveiller et Punir", "Les Mots et les Choses", "L'Archéologie du savoir", "La Volonté de savoir"],
-                        correct: 3,
+                        answers: ["Les Mots et les Choses", "Surveiller et punir", "L'Archéologie du savoir", "La Volonté de savoir"],
+                        correct: 1,
                     },
                 ], 
         },
@@ -237,72 +238,72 @@ const questions = {
                 {
                     question: "Quel est l'élément chimique dont le symbole est O ?",
                     answers: ["Oxygène", "Ozone", "Or", "Oxyde"],
-                    correct: 1,
+                    correct: 0,
                 },
                 {
                     question: "Quel est l'astre le plus proche de la Terre ?",
-                    answers: ["La Lune", "Le Soleil", "Mars", "Vénus"],
+                    answers: ["Mars", "Le Soleil", "La Lune", "Vénus"],
                     correct: 2,
                 },
                 {
                     question: "Quel est le nom de la galaxie dans laquelle se trouve la Terre ?",
-                    answers: ["Voie Lactée", "Andromède", "Centaurus", "Soleil"],
-                    correct: 1,
+                    answers: ["Soleil", "Andromède", "Centaurus", "Voie Lactée"],
+                    correct: 3,
                 },
                 {
                     question: "Quel est le plus grand animal vivant sur Terre ?",
                     answers: ["La baleine bleue", "L'éléphant", "Le requin", "La girafe"],
-                    correct: 3,
-                },
-                {
-                    question: "De quel gaz est principalement composé l'atmosphère terrestre ?",
-                    answers: ["Azote", "Oxygène", "Hydrogène", "Carbone"],
                     correct: 0,
                 },
                 {
-                    question: "Quel est le nom du premier homme à avoir marché sur la Lune ?",
-                    answers: ["Neil Armstrong", "Yuri Gagarin", "Buzz Aldrin", "Michael Collins"],
+                    question: "De quel gaz est principalement composé l'atmosphère terrestre ?",
+                    answers: ["Hydrogène", "Oxygène", "Azote", "Carbone"],
                     correct: 2,
                 },
                 {
-                    question: "Quel est l'organe principal pour la respiration chez les humains ?",
-                    answers: ["Les poumons", "Le cœur", "Le foie", "Le cerveau"],
+                    question: "Quel est le nom du premier homme à avoir marché sur la Lune ?",
+                    answers: ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Michael Collins"],
+                    correct: 1,
+                },
+                {
+                    question: "Quel est le nom du processus par lequel l'oxygène est échangé dans les poumons ?",
+                    answers: ["La photosynthèse", "La diffusion", "La respiration cellulaire", "La ventilation pulmonaire"],
                     correct: 1,
                 },
                 {
                     question: "Quel est l'élément chimique qui est le plus abondant dans l'univers ?",
                     answers: ["Hydrogène", "Oxygène", "Carbone", "Hélium"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Combien de planètes gravitent autour du Soleil dans notre système solaire ?",
-                    answers: ["8", "7", "9", "10"],
-                    correct: 1,
+                    answers: ["10", "7", "9", "8"],
+                    correct: 3,
                 },
                 {
                     question: "Qu'est-ce qu'un trou noir ?",
-                    answers: ["Une région où la gravité est si forte que rien ne peut en sortir", "Un trou dans la Terre", "Une planète", "Une étoile mourante"],
+                    answers: ["Une planète", "Un trou dans la Terre", "Une région où la gravité est si forte que rien ne peut en sortir", "Une étoile mourante"],
                     correct: 2,
                 },
                 {
                     question: "Quelle planète est surnommée la planète rouge ?",
                     answers: ["Mars", "Jupiter", "Vénus", "Saturne"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Quel est l’état principal de l’eau à 100 degrés Celsius ?",
-                    answers: ["Gazeux", "Liquide", "Solide", "Plasma"],
-                    correct: 2,
+                    answers: ["Liquide", "Gazeux", "Solide", "Plasma"],
+                    correct: 1,
                 },
                 {
                     question: "Quel est le satellite naturel de la Terre ?",
-                    answers: ["La Lune", "Mars", "Io", "Titan"],
+                    answers: ["Titan", "Mars", "Io", "La lune"],
                     correct: 3,
                 },
                 {
                     question: "Quelle force maintient les planètes en orbite autour du Soleil ?",
                     answers: ["La gravité", "La magnétosphère", "La force nucléaire", "L’électricité statique"],
-                    correct: 2,
+                    correct: 0,
                 },
                 {
                     question: "Quelle étoile est la plus proche de la Terre après le Soleil ?",
@@ -313,78 +314,78 @@ const questions = {
             medium: [
                 {
                     question: "Quel est le nom du premier satellite artificiel lancé dans l'espace ?",
-                    answers: ["Spoutnik 1", "Apollo 11", "Vostok 1", "Hubble"],
-                    correct: 1,
+                    answers: ["Volstok 1", "Apollo 11", "Spoutnik 1", "Hubble"],
+                    correct: 2,
                 },
                 {
-                    question: "Quel est le nom de la théorie qui explique l'origine de l'univers ?",
-                    answers: ["Le Big Bang", "La théorie de la relativité", "La mécanique quantique", "L'astrophysique"],
-                    correct: 3,
+                    question: "Selon le modèle cosmologique actuel, quel phénomène a conduit à l'accélération de l'expansion de l'univers après la phase d'inflation primordiale ?",
+                    answers: ["La matière noire", "L'énergie noire", "La décohérence quantique", "La théorie de la relativité générale"],
+                    correct: 1, 
                 },
                 {
                     question: "Quel est l'élément chimique dont le symbole est He ?",
-                    answers: ["Hélium", "Hydrogène", "Beryllium", "Carbone"],
-                    correct: 2,
+                    answers: ["Carbone", "Hydrogène", "Beryllium", "Hélium"],
+                    correct: 3,
                 },
                 {
                     question: "Qu'est-ce qu'une étoile à neutrons ?",
                     answers: ["Un objet dense formé par l'effondrement d'une étoile massive", "Une étoile en fin de vie", "Une planète géante", "Un satellite naturel"],
-                    correct: 1,
+                    correct: 0,
                 },
                 {
                     question: "Qu'est-ce qu'un quasar ?",
                     answers: ["Une source d'énergie extrêmement brillante en astrophysique", "Une étoile", "Un type de planète", "Un trou noir"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Qu'est-ce que l'énergie noire ?",
-                    answers: ["Une forme d'énergie mystérieuse accélérant l'expansion de l'univers", "Une matière invisible", "Un type de radiation", "Une planète lointaine"],
-                    correct: 2,
+                    answers: ["Une planète lointaine", "Une matière invisible", "Un type de radiation", "Une forme d'énergie mystérieuse accélérant l'expansion de l'univers"],
+                    correct: 3,
                 },
                 {
                     question: "Quel est le nom du télescope spatial lancé en 1990 ?",
-                    answers: ["Hubble", "James Webb", "Chandra", "Kepler"],
-                    correct: 1,
+                    answers: ["Chandra", "James Webb", "Hubble", "Kepler"],
+                    correct: 2,
                 },
                 {
                     question: "Quel est le principal gaz à effet de serre responsable du réchauffement climatique ?",
                     answers: ["Dioxyde de carbone", "Oxygène", "Ozone", "Méthane"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Qui a découvert la structure de l'ADN ?",
                     answers: ["James Watson et Francis Crick", "Albert Einstein", "Rosalind Franklin", "Charles Darwin"],
-                    correct: 2,
+                    correct: 0,
                 },
                 {
                     question: "Quelle est la particule subatomique porteuse de la force électromagnétique ?",
-                    answers: ["Le photon", "L'électron", "Le neutron", "Le proton"],
-                    correct: 3,
+                    answers: ["Le neutron", "L'électron", "Le photon", "Le proton"],
+                    correct: 2,
                 },
                 {
                     question: "Quel est le nom du physicien qui a proposé la théorie de la relativité générale ?",
                     answers: ["Albert Einstein", "Isaac Newton", "Niels Bohr", "Galilée"],
-                    correct: 1,
+                    correct: 0,
                 },
                 {
                     question: "Quelle est la couche externe de l’atmosphère terrestre appelée ?",
-                    answers: ["L'exosphère", "La stratosphère", "La mésosphère", "La thermosphère"],
-                    correct: 2,
+                    answers: ["La stratosphère", "L'exosphère", "La mésosphère", "La thermosphère"],
+                    correct: 1,
                 },
                 {
                     question: "Quelle est la durée approximative d’une année lumière en kilomètres ?",
                     answers: ["9 460 milliards de km", "1 milliard de km", "500 millions de km", "100 milliards de km"],
-                    correct: 3,
+                    correct: 0,
                 },
                 {
                     question: "Quel est le nom du phénomène où une étoile explose en libérant une énorme quantité d'énergie ?",
-                    answers: ["Une supernova", "Une nova", "Un trou noir", "Un pulsar"],
+                    answers: ["Un trou noir", "Une nova", "Une supernova", "Un pulsar"],
                     correct: 2,
                 },
                 {
                     question: "Quel est le pourcentage approximatif de matière noire dans l'univers ?",
-                    answers: ["27%", "50%", "10%", "90%"],
-                    correct: 1,
+                    answers: ["10%", "50%", "27%", "90%"],
+                    correct: 2,
                 },
             ],
 
@@ -471,80 +472,79 @@ const questions = {
                     {
                         question: "Qui était le premier président des États-Unis ?",
                         answers: ["Abraham Lincoln", "Franklin D. Roosevelt", "Thomas Jefferson", "George Washington"],
-                        correct: 3,
+                        correct: 3,  // George Washington
                     },
                     {
                         question: "En quelle année a eu lieu la Révolution française ?",
                         answers: ["1776", "1812", "1789", "1620"],
-                        correct: 2,
+                        correct: 2,  // 1789
                     },
                     {
                         question: "Qui a écrit 'Les Misérables' ?",
                         answers: ["Marcel Proust", "Victor Hugo", "Émile Zola", "Honoré de Balzac"],
-                        correct: 1,
+                        correct: 1,  // Victor Hugo
                     },
                     {
                         question: "Qui a été le dernier roi de France ?",
                         answers: ["Louis XVI", "Charles X", "Louis-Philippe", "Napoléon III"],
-                        correct: 2,
+                        correct: 2,  // Louis-Philippe
                     },
                     {
                         question: "Quel événement a marqué le début de la Seconde Guerre mondiale ?",
                         answers: ["Le débarquement de Normandie", "L'attaque de Pearl Harbor", "La prise de Berlin", "L'invasion de la Pologne par l'Allemagne"],
-                        correct: 3,
+                        correct: 3,  // L'invasion de la Pologne par l'Allemagne
                     },
                     {
                         question: "Où a eu lieu le premier vol humain dans l'espace ?",
                         answers: ["Chine", "Union Soviétique", "France", "États-Unis"],
-                        correct: 1,
+                        correct: 1,  // Union Soviétique (Vostok 1, 1961)
                     },
                     {
                         question: "Qui a fondé l'Empire romain ?",
                         answers: ["Néron", "Trajan", "Jules César", "Augustus"],
-                        correct: 3,
+                        correct: 3,  // Augustus (empereur romain, anciennement Octave)
                     },
                     {
                         question: "Qui a découvert l'Amérique en 1492 ?",
                         answers: ["Vasco de Gama", "Marco Polo", "Ferdinand Magellan", "Christophe Colomb"],
-                        correct: 3,
+                        correct: 3,  // Christophe Colomb
                     },
                     {
                         question: "Quel est le nom de la célèbre bataille de 1066 entre les Normands et les Anglo-Saxons ?",
                         answers: ["Bataille de Waterloo", "Bataille de Hastings", "Bataille d'Azincourt", "Bataille de Stalingrad"],
-                        correct: 1,
+                        correct: 1,  
                     },
                     {
                         question: "Quel était le nom de l'ancienne capitale de l'Égypte ?",
                         answers: ["Memphis", "Thèbes", "Le Caire", "Alexandrie"],
-                        correct: 1,
+                        correct: 0,  
                     },
                     {
                         question: "Quel est le nom de la guerre entre les États-Unis et le Vietnam ?",
                         answers: ["Guerre de Sécession", "Guerre du Golfe", "Guerre du Vietnam", "Guerre d'Indépendance américaine"],
-                        correct: 2,
+                        correct: 2,  
                     },
                     {
                         question: "Qui a été le premier empereur de Chine ?",
                         answers: ["Qin Shi Huang", "Liu Bang", "Kublai Khan", "Sun Yat-sen"],
-                        correct: 0,
+                        correct: 0,  
                     },
                     {
                         question: "Qui a écrit 'De l'esprit des lois' ?",
                         answers: ["Montesquieu", "Rousseau", "Voltaire", "Diderot"],
-                        correct: 0,
+                        correct: 0,  
                     },
                     {
                         question: "Quel événement a mis fin à la monarchie absolue en France ?",
                         answers: ["La Révolution française", "La Première Guerre mondiale", "La prise de la Bastille", "Le coup d'État de Napoléon"],
-                        correct: 2,
+                        correct: 0,  
                     },
                     {
                         question: "Qui était le chef des armées alliées lors du débarquement en Normandie ?",
                         answers: ["Winston Churchill", "Dwight D. Eisenhower", "Franklin D. Roosevelt", "Charles de Gaulle"],
-                        correct: 1,
+                        correct: 1,  
                     },
                 ],
-                
                 medium: [
                     {
                         question: "En quelle année a été signé le traité de Versailles ?",
@@ -627,79 +627,78 @@ const questions = {
                         {
                             question: "Quel est le nom de la bataille décisive qui a marqué la fin des guerres napoléoniennes ?",
                             answers: ["Bataille de Waterloo", "Bataille d'Austerlitz", "Bataille de Leipzig", "Bataille de Trafalgar"],
-                            correct: 1,
+                            correct: 0,  // Bataille de Waterloo
                         },
                         {
                             question: "Qui a mené la bataille de la Somme pendant la Première Guerre mondiale ?",
-                            answers: ["Douglas Haig", "Wilhelm II", "Georges Vanier", "Ferdinand Foch"],
-                            correct: 3,
+                            answers: ["George Vanier", "Wilhelm II", "Douglas Haig", "Ferdinand Foch"],
+                            correct: 2,  // Douglas Haig
                         },
                         {
                             question: "Qui a été le principal architecte de l'Empire britannique au XIXe siècle ?",
                             answers: ["Winston Churchill", "Cecil Rhodes", "Benjamin Disraeli", "David Livingstone"],
-                            correct: 2,
+                            correct: 2,  // Benjamin Disraeli
                         },
                         {
                             question: "Quel événement a marqué la fin du régime soviétique en Russie ?",
                             answers: ["La chute du mur de Berlin", "La révolution russe de 1917", "La perestroïka", "La fin de la guerre froide"],
-                            correct: 3,
+                            correct: 2,  // La perestroïka
                         },
                         {
                             question: "Qui était le premier ministre du Royaume-Uni lors du début de la Seconde Guerre mondiale ?",
                             answers: ["Winston Churchill", "Neville Chamberlain", "Clement Attlee", "Margaret Thatcher"],
-                            correct: 2,
+                            correct: 1,  // Neville Chamberlain
                         },
                         {
                             question: "Quel traité a mis fin à la Première Guerre mondiale ?",
                             answers: ["Le traité de Versailles", "Le traité de Trianon", "Le traité de Paris", "Le traité de Brest-Litovsk"],
-                            correct: 3,
+                            correct: 0,  // Le traité de Versailles
                         },
                         {
                             question: "En quelle année l'Union européenne a-t-elle été fondée ?",
                             answers: ["1993", "1957", "1989", "1970"],
-                            correct: 2,
+                            correct: 1,  // 1957
                         },
                         {
                             question: "Qui a dirigé la France pendant la Révolution française ?",
-                            answers: ["Maximilien Robespierre", "Napoléon Bonaparte", "Louis XVI", "Charles de Gaulle"],
-                            correct: 0,
+                            answers: ["Louis XVI", "Napoléon Bonaparte", "Maximilien Robespierre", "Charles de Gaulle"],
+                            correct: 2,  // Maximilien Robespierre
                         },
                         {
                             question: "Quel empereur romain a fait légaliser le christianisme dans l'Empire romain ?",
-                            answers: ["Constantin Ier", "Néron", "Jules César", "Trajan"],
-                            correct: 0,
+                            answers: ["Trajan", "Néron", "Jules César", "Constantin Ier"],
+                            correct: 3,  // Constantin Ier
                         },
                         {
                             question: "Quel roi d'Angleterre a rompu avec l'Église catholique pour fonder l'Église anglicane ?",
                             answers: ["Henri VIII", "Richard III", "Charles I", "Édouard VI"],
-                            correct: 2,
+                            correct: 0,  // Henri VIII
                         },
                         {
                             question: "Quel traité a mis fin à la guerre de Trente Ans en 1648 ?",
-                            answers: ["Le traité de Westphalie", "Le traité de Versailles", "Le traité de Paris", "Le traité de Utrecht"],
-                            correct: 1,
+                            answers: ["Le traité de Paris", "Le traité de Versailles", "Le traité de Westphalie", "Le traité de Utrecht"],
+                            correct: 2,  // Le traité de Westphalie
                         },
                         {
                             question: "Qui a été le dernier empereur du Saint-Empire romain germanique ?",
                             answers: ["François II", "Charles V", "Friedrich II", "Maximilien II"],
-                            correct: 2,
+                            correct: 0,  // François II
                         },
                         {
                             question: "Quel est le nom de la bataille décisive de la guerre de Cent Ans, où Jeanne d'Arc joua un rôle clé ?",
-                            answers: ["La bataille de Patay", "La bataille d'Azincourt", "La bataille de Poitiers", "La bataille de Crécy"],
-                            correct: 3,
+                            answers: ["La bataille de Crécy", "La bataille d'Azincourt", "La bataille de Poitiers", "La bataille de Patay"],
+                            correct: 3,  // La bataille de Patay
                         },
                         {
                             question: "Qui était le premier ministre britannique pendant la Première Guerre mondiale ?",
-                            answers: ["David Lloyd George", "Winston Churchill", "Herbert Asquith", "Clement Attlee"],
-                            correct: 1,
+                            answers: ["Winston Churchill", "David Lloyd George", "Herbert Asquith", "Clement Attlee"],
+                            correct: 0,  // David Lloyd George
                         },
                         {
                             question: "Quel événement a marqué la fin de l'Empire byzantin en 1453 ?",
                             answers: ["La prise de Constantinople", "La chute de Rome", "La bataille de Manzikert", "La prise de Jérusalem"],
-                            correct: 2,
+                            correct: 0,  // La prise de Constantinople
                         },
-                        
                     ]
                 },
             };
