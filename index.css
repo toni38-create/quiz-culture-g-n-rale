@@ -285,6 +285,27 @@ html {
     transition: transform 0.3s ease; 
 }
 
+/* LE RECAP */
+
+hr {
+    border: none;
+    height: 4px;
+    background-color: #ffffff;
+    width: 40%; /* Longueur */
+    margin: 20px auto; /* Centré */
+    border-radius: 5px; /* Coins arrondis */
+    margin-top: 80px;
+}
+
+.recap {
+    text-align: center;
+    margin-top: 50px;
+    font-family: montserrat;
+    font-weight: 700;
+    color: white;
+    font-size: 50px;
+}
+
 /* LE TIMER */
 
 .temps {
@@ -305,6 +326,7 @@ html {
     bottom: 10px;             
     right: 20px;    
     font-family: Montserrat;
+    font-weight: 600;
     color: white;
     font-size: 50px;
 }
