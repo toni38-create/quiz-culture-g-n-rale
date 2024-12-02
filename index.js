@@ -278,7 +278,6 @@ function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = n
     }
 }
 
-
 /////////////////////////////////////// SCORE FINAL ////////////////////////////////////////////////////
 
 // Variable pour le score 
@@ -307,8 +306,16 @@ document.getElementById('retourAccueil').addEventListener('click', function() {
 
 ///////////////////////////////////////// BOUTON REJOUER //////////////////////////////////////////////////////
 
+function boutonRejouer() {
+    afficherQuestion(quizId, niveau, questionIndex, intervalID = null);
+    document.getElementById('retourAccueil').style.display = 'none';
+    document.getElementById('scoreFinal').style.display = 'none';
+    document.getElementById('boutonRejouer').style.display = 'none';
+    score = 0;
+}
+
 document.getElementById('boutonRejouer').addEventListener('click', function() {
-    
+    boutonRejouer();
 });
 
 /////////////////////////////////////////// COMPTEUR DE QUESTIONS ///////////////////////////////////////////////////////////
