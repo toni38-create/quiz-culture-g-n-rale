@@ -129,6 +129,8 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
         button.innerText = questionObj.answers[index];
         button.onclick = function() {
             verifierReponse(quizId, niveau, questionIndex, index, timerID);
+            sauvegardeRéponse(questionIndex, index);
+            console.log(sauvegardeRéponse);
         };
     });
 }
@@ -214,11 +216,11 @@ function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = n
         setTimeout(() => {
             successMessageElement.style.display = 'none';
             if (quizId === 'quiz1') {
-                document.getElementById('bonneRéponseQuiz1').style.display = 'none'; // Disparition de l'image pour quiz 1
+                document.getElementById('bonneRéponseQuiz1').style.display = 'none'; // Enlève l'image pour quiz 1
             } else if (quizId === 'quiz2') {
-                document.getElementById('bonneRéponseQuiz2').style.display = 'none'; // Disparition de l'image pour quiz 2
+                document.getElementById('bonneRéponseQuiz2').style.display = 'none'; // Enlève l'image pour quiz 2
             } else if (quizId === 'quiz3') {
-                document.getElementById('bonneRéponseQuiz3').style.display = 'none'; // Disparition de l'image pour quiz 3
+                document.getElementById('bonneRéponseQuiz3').style.display = 'none'; // Enlève l'image pour quiz 3
             }
             
         if (questionIndex + 1 < questions[quizId][niveau].length) {
@@ -291,7 +293,34 @@ function scoreFinal() {
     document.getElementById('timer').style.display = 'none';
     document.getElementById(quizId, niveau).style.display = 'none';
     document.getElementById('boutonRejouer').style.display = 'block';
+    document.getElementById('containerRecap').style.display = 'block';
 }
+
+///////////////////////////////////// LE RECAP /////////////////////////////////////////////////////////////
+
+let utilisateurRéponse = [];
+
+function sauvegardeRéponse(questionIndex, answerIndex) {
+    utilisateurRéponse[questionIndex] = answerIndex; 
+    console.log(`Réponse sauvegardée pour la question ${questionIndex + 1} : Réponse ${answerIndex}`);
+}
+
+console.log('Toutes les réponses de l’utilisateur :', utilisateurRéponse);
+
+function afficherRecapitulatif(questions, utilisateurRéponse) {
+    console.log("Récapitulatif :");
+    questions.forEach((question, index) => {
+        const estCorrect = utilisateurRéponse[index] === question.correctAnswer;
+        console.log(
+            `Question ${index + 1} : ${question.question}\n` +
+            `Votre réponse : ${question.answers[utilisateurRéponse[index]]}\n` +
+            `Résultat : ${estCorrect ? "Correct" : "Incorrect"}`
+        );
+    });
+}
+
+afficherRecapitulatif(0, 1);
+
 
 ///////////////////////////////////////// BOUTON RETOUR A L ACCUEIL //////////////////////////////////////////////////////
 
@@ -302,6 +331,9 @@ document.getElementById('retourAccueil').addEventListener('click', function() {
     document.getElementById('scoreFinal').style.display = 'none';
     document.getElementById('timer').style.display = 'none';
     document.getElementById('questionNombre').style.display = 'none';
+    document.getElementById('boutonRejouer').style.display = 'none';
+    document.getElementById('containerRecap').style.display = 'none';
+    score = 0;
 });
 
 ///////////////////////////////////////// BOUTON REJOUER //////////////////////////////////////////////////////
@@ -311,6 +343,7 @@ function boutonRejouer() {
     document.getElementById('retourAccueil').style.display = 'none';
     document.getElementById('scoreFinal').style.display = 'none';
     document.getElementById('boutonRejouer').style.display = 'none';
+    document.getElementById('containerRecap').style.display = 'none';
     score = 0;
 }
 
