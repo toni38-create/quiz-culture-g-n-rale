@@ -130,7 +130,6 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
         button.onclick = function() {
             verifierReponse(quizId, niveau, questionIndex, index, timerID);
             sauvegardeRéponse(questionIndex, index);
-            console.log(sauvegardeRéponse);
         };
     });
 }
@@ -294,6 +293,8 @@ function scoreFinal() {
     document.getElementById(quizId, niveau).style.display = 'none';
     document.getElementById('boutonRejouer').style.display = 'block';
     document.getElementById('containerRecap').style.display = 'block';
+    document.getElementById('listeRéponses').style.display = 'block';
+    afficherRecapitulatif(); 
 }
 
 ///////////////////////////////////// LE RECAP /////////////////////////////////////////////////////////////
@@ -303,23 +304,39 @@ let utilisateurRéponse = [];
 function sauvegardeRéponse(questionIndex, answerIndex) {
     utilisateurRéponse[questionIndex] = answerIndex; 
     console.log(`Réponse sauvegardée pour la question ${questionIndex + 1} : Réponse ${answerIndex}`);
+    console.log('Toutes les réponses de l’utilisateur :', utilisateurRéponse);
 }
 
-console.log('Toutes les réponses de l’utilisateur :', utilisateurRéponse);
+const listeRéponses = document.getElementById("listeRéponses");
+   
 
-function afficherRecapitulatif(questions, utilisateurRéponse) {
-    console.log("Récapitulatif :");
-    questions.forEach((question, index) => {
-        const estCorrect = utilisateurRéponse[index] === question.correctAnswer;
-        console.log(
-            `Question ${index + 1} : ${question.question}\n` +
-            `Votre réponse : ${question.answers[utilisateurRéponse[index]]}\n` +
-            `Résultat : ${estCorrect ? "Correct" : "Incorrect"}`
-        );
+function afficherRecapitulatif() {
+    listeRéponses.style.display = "block"; // Afficher la liste des réponses
+    listeRéponses.innerHTML = ""; // Réinitialiser le contenu de la liste
+
+    utilisateurRéponse.forEach((answerIndex, index) => {
+        const listItem = document.createElement("li"); // Créer un élément de liste
+        const answerText = questions[quizId][niveau][index].answers[answerIndex];  // Obtenir la réponse complète
+
+        let correctAnswer = questions[quizId][niveau][questionIndex].answers[correctAnswerIndex];
+
+        let resultat;
+
+        if (answerText === correctAnswer) {
+            resultat = 'Correct';
+        } else {
+            resultat = `La réponse était ${correctAnswer}`;
+        }
+
+        listItem.innerText = `Question ${index + 1} : 
+        ${questions[quizId][niveau][index].question}
+        Votre réponse : ${answerText}
+        ${resultat}`;
+        
+        console.log(listItem.innerText);
+        listeRéponses.appendChild(listItem); // Ajouter l'élément à la liste
     });
 }
-
-afficherRecapitulatif(0, 1);
 
 
 ///////////////////////////////////////// BOUTON RETOUR A L ACCUEIL //////////////////////////////////////////////////////
