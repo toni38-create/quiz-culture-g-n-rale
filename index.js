@@ -102,6 +102,7 @@ document.getElementById('quiz3-difficult' || 'quiz3').addEventListener('click', 
 function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
 
     clearInterval(intervalID);
+
     document.getElementById('questionNombre').style.display = 'block'; // Compteur de questions 
     document.getElementById('containerNiveauquiz1').style.display = 'none';
     document.getElementById('containerNiveauquiz2').style.display = 'none';
@@ -193,7 +194,7 @@ function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = n
         // Afficher le message de succès
         score++;
         console.log(score);
-        successMessageElement.innerText = "Bonne réponse !"; 
+        successMessageElement.innerHTML = "Bonne réponse !"
         successMessageElement.style.display = 'block'; 
 
         
@@ -234,8 +235,7 @@ function verifierReponse(quizId, niveau, questionIndex, answerIndex, timerID = n
         } else {
         // Afficher le message d'erreur
         const bonneReponse = questions[quizId][niveau][questionIndex].answers[correctAnswer];
-        feedbackElement.innerText = `Mauvaise réponse ! 
-        
+        feedbackElement.innerHTML = `Mauvaise réponse !<br><br>  
         La bonne réponse était : ${bonneReponse}`;
         feedbackElement.style.display = 'block'; 
         
@@ -316,22 +316,25 @@ function afficherRecapitulatif() {
 
     utilisateurRéponse.forEach((answerIndex, index) => {
         const listItem = document.createElement("li"); // Créer un élément de liste
-        const answerText = questions[quizId][niveau][index].answers[answerIndex];  // Obtenir la réponse complète
+        const answerText = questions[quizId][niveau][index].answers[answerIndex];  // Réponse de l'utilisateur 
 
-        let correctAnswer = questions[quizId][niveau][questionIndex].answers[correctAnswerIndex];
+        let correctAnswerIndex = questions[quizId][niveau][index].correct;
+        let correctAnswer = questions[quizId][niveau][index].answers[correctAnswerIndex];
+
+        console.log("Indice de la bonne réponse : ", correctAnswerIndex);
 
         let resultat;
 
         if (answerText === correctAnswer) {
             resultat = 'Correct';
         } else {
-            resultat = `La réponse était ${correctAnswer}`;
+            resultat = `La bonne réponse était : ${correctAnswer}`;
         }
 
-        listItem.innerText = `Question ${index + 1} : 
-        ${questions[quizId][niveau][index].question}
-        Votre réponse : ${answerText}
-        ${resultat}`;
+        listItem.innerHTML = `<span class="question-récap">Question ${index + 1}<br><br>
+        ${questions[quizId][niveau][index].question}<br><br>
+        Votre réponse : ${answerText}<br><br>
+        ${resultat}</span>`;
         
         console.log(listItem.innerText);
         listeRéponses.appendChild(listItem); // Ajouter l'élément à la liste
@@ -375,6 +378,7 @@ function avancerQuestion(quizId, niveau, questionIndex) {
     if (questionIndex + 1 <= questionsNiveau.length) { 
         let questionLength = questionsNiveau.length; 
         updateQuestionCounter(questionIndex + 1, questionLength); 
+        console.log()
     } else {
         console.log("Fin du quiz");
     }
