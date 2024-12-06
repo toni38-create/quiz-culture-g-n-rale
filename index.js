@@ -129,6 +129,7 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
     document.getElementById('containerNiveauquiz2').style.display = 'none';
     document.getElementById('containerNiveauquiz3').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
+    avancerQuestion(quizId, niveau, questionIndex);
     document.getElementById(quizId).style.display = 'block'; 
     currentQuiz = quizId; // Mettre à jour le quiz courant
     currentQuestionIndex = 0; // Réinitialiser l'index de la question
@@ -154,6 +155,7 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
         };
     });
 }
+
 
 points = 0; // Réinitialisation des points au début du quiz
 
@@ -360,6 +362,7 @@ function afficherRecapitulatif() {
     });
 }
 
+
 ///////////////////////////////////////// BOUTON RETOUR A L ACCUEIL //////////////////////////////////////////////////////
 
 document.getElementById('retourAccueil').addEventListener('click', function() {
@@ -373,7 +376,6 @@ document.getElementById('retourAccueil').addEventListener('click', function() {
     document.getElementById('containerRecap').style.display = 'none';
     score = 0;
 });
-
 
 ///////////////////////////////////////// BOUTON REJOUER //////////////////////////////////////////////////////
 
@@ -408,4 +410,3 @@ function updateQuestionCounter(questionIndex, questionLength) {
     document.getElementById('questionNombre').innerText = 
     questionIndex + " / " + questionLength;
 }
-
