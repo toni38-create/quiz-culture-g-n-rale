@@ -7,12 +7,14 @@ let currentQuestionIndex = 0;
 let questionIndex = 0; 
 
 /////////////// Choix du sujet lettres et philosophie ///////////////////////////
+
 document.getElementById('imageNietzsche').addEventListener('click', function() {
     choixNiveaux();
     document.getElementById('containerNiveauquiz1').style.display = 'flex';
 });
 
 /////////////// Choix du sujet sciences /////////////////////////////////
+
 document.getElementById('imageEinstein').addEventListener('click', function() {
     choixNiveaux();
     document.getElementById('containerNiveauquiz2').style.display = 'flex';
@@ -39,17 +41,23 @@ function choixNiveaux() {
 
 /////////////////// QUESTIONS LETTRES ET PHILOSOPHIE /////////////////////////////////////////
 
+////// Niveau simple 
+
 document.getElementById('quiz1-easy' || 'quiz1').addEventListener('click', function() {
     quizId = 'quiz1';
     niveau = 'easy';
     afficherQuestion('quiz1', 'easy', 0);
 });
 
+////// Niveau moyen 
+
 document.getElementById('quiz1-medium' || 'quiz1').addEventListener('click', function() {
     quizId = 'quiz1';
     niveau = 'medium';
     afficherQuestion('quiz1', 'medium', 0);
 });
+
+////// Niveau difficile 
 
 document.getElementById('quiz1-difficult' || 'quiz1').addEventListener('click', function() {
     quizId = 'quiz1';
@@ -59,17 +67,24 @@ document.getElementById('quiz1-difficult' || 'quiz1').addEventListener('click', 
 
 /////////////////////////// QUESTIONS SCIENCES /////////////////////////////////////////
 
+
+////// Niveau simple 
+
 document.getElementById('quiz2-easy' || 'quiz2').addEventListener('click', function() {
     quizId = 'quiz2';
     niveau = 'easy';
     afficherQuestion('quiz2', 'easy', 0);
 });
 
+////// Niveau moyen 
+
 document.getElementById('quiz2-medium' || 'quiz2').addEventListener('click', function() {
     quizId = 'quiz2';
     niveau = 'medium';
     afficherQuestion('quiz2', 'medium', 0);
 });
+
+////// Niveau difficile 
 
 document.getElementById('quiz2-difficult' || 'quiz2').addEventListener('click', function() {
     quizId = 'quiz2';
@@ -79,17 +94,23 @@ document.getElementById('quiz2-difficult' || 'quiz2').addEventListener('click', 
 
 /////////////////////////// QUESTIONS HISTOIRE  /////////////////////////////////////////
 
+////// Niveau simple 
+
 document.getElementById('quiz3-easy' || 'quiz3').addEventListener('click', function() {
     quizId = 'quiz3';
     niveau = 'easy';
     afficherQuestion('quiz3', 'easy', 0);
 });
 
+////// Niveau moyen 
+
 document.getElementById('quiz3-medium' || 'quiz3').addEventListener('click', function() {
     quizId = 'quiz3';
     niveau = 'medium';
     afficherQuestion('quiz3', 'medium', 0);
 });
+
+////// Niveau difficile 
 
 document.getElementById('quiz3-difficult' || 'quiz3').addEventListener('click', function() {
     quizId = 'quiz3';
@@ -108,7 +129,6 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
     document.getElementById('containerNiveauquiz2').style.display = 'none';
     document.getElementById('containerNiveauquiz3').style.display = 'none';
     document.getElementById('cadreNiveau').style.display = 'none';
-    avancerQuestion(quizId, niveau, questionIndex);
     document.getElementById(quizId).style.display = 'block'; 
     currentQuiz = quizId; // Mettre à jour le quiz courant
     currentQuestionIndex = 0; // Réinitialiser l'index de la question
@@ -134,7 +154,6 @@ function afficherQuestion(quizId, niveau, questionIndex, intervalID = null) {
         };
     });
 }
-
 
 points = 0; // Réinitialisation des points au début du quiz
 
@@ -299,10 +318,10 @@ function scoreFinal() {
 
 ///////////////////////////////////// LE RECAP /////////////////////////////////////////////////////////////
 
-let utilisateurRéponse = [];
+let utilisateurRéponse = []; // Stock des réponses de l'utilisateur
 
 function sauvegardeRéponse(questionIndex, answerIndex) {
-    utilisateurRéponse[questionIndex] = answerIndex; 
+    utilisateurRéponse[questionIndex] = answerIndex;  
     console.log(`Réponse sauvegardée pour la question ${questionIndex + 1} : Réponse ${answerIndex}`);
     console.log('Toutes les réponses de l’utilisateur :', utilisateurRéponse);
 }
@@ -311,11 +330,11 @@ const listeRéponses = document.getElementById("listeRéponses");
    
 
 function afficherRecapitulatif() {
-    listeRéponses.style.display = "block"; // Afficher la liste des réponses
-    listeRéponses.innerHTML = ""; // Réinitialiser le contenu de la liste
+    listeRéponses.style.display = "block"; // Affiche la liste des réponses
+    listeRéponses.innerHTML = ""; // Réinitialise le contenu de la liste
 
     utilisateurRéponse.forEach((answerIndex, index) => {
-        const listItem = document.createElement("li"); // Créer un élément de liste
+        const listItem = document.createElement("li"); // Crée un élément de liste
         const answerText = questions[quizId][niveau][index].answers[answerIndex];  // Réponse de l'utilisateur 
 
         let correctAnswerIndex = questions[quizId][niveau][index].correct;
@@ -341,7 +360,6 @@ function afficherRecapitulatif() {
     });
 }
 
-
 ///////////////////////////////////////// BOUTON RETOUR A L ACCUEIL //////////////////////////////////////////////////////
 
 document.getElementById('retourAccueil').addEventListener('click', function() {
@@ -355,6 +373,7 @@ document.getElementById('retourAccueil').addEventListener('click', function() {
     document.getElementById('containerRecap').style.display = 'none';
     score = 0;
 });
+
 
 ///////////////////////////////////////// BOUTON REJOUER //////////////////////////////////////////////////////
 
@@ -389,3 +408,4 @@ function updateQuestionCounter(questionIndex, questionLength) {
     document.getElementById('questionNombre').innerText = 
     questionIndex + " / " + questionLength;
 }
+
